@@ -23,7 +23,7 @@ namespace BearCamp.Controllers
 
         //
         // GET: /Donors/Details/5
-
+        [Authorize]
         public ViewResult Details(int id)
         {
             Donor donor = Db.Donors.Find(id);
@@ -32,7 +32,7 @@ namespace BearCamp.Controllers
 
         //
         // GET: /Donors/Create
-
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -56,7 +56,7 @@ namespace BearCamp.Controllers
         
         //
         // GET: /Donors/Edit/5
- 
+        [Authorize]
         public ActionResult Edit(int id)
         {
             Donor donor = Db.Donors.Find(id);
@@ -80,7 +80,7 @@ namespace BearCamp.Controllers
 
         //
         // GET: /Donors/Delete/5
- 
+        [Authorize]
         public ActionResult Delete(int id)
         {
             Donor donor = Db.Donors.Find(id);

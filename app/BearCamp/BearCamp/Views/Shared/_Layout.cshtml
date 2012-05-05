@@ -16,7 +16,7 @@
                 @if (HttpContext.Current.User.Identity.IsAuthenticated)
                 {
                     <li>@Html.ActionLink("Donors", "Index", "Donors")</li> 
-                    <li>@Html.ActionLink("Manage Users", "Index", "User" )</li> 
+                    <li>@Html.ActionLink("Manage Users", "Index", "User")</li> 
                     <li>@Html.ActionLink("Manage Roles", "Index", "Permission")</li>  
                 }
             </ul>

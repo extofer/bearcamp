@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using System.Data;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using BearEF;
-using System.Web.Routing;
 using System.Configuration;
 using BearCommon;
 
@@ -44,7 +39,7 @@ namespace BearCamp.Controllers
         {
             if (ModelState.IsValid)
             {
-                UserExport export = new UserExport();
+                var export = new UserExport();
                 string sConn = ConfigurationManager.ConnectionStrings["export2csvConn"].ToString();
 
                 export.ExportCSV("c:\\csvData.csv", sConn);

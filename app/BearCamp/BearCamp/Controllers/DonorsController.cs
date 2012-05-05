@@ -15,7 +15,7 @@ namespace BearCamp.Controllers
 
         //
         // GET: /Donors/
-
+        [Authorize]
         public ViewResult Index()
         {
             return View(Db.Donors.ToList());

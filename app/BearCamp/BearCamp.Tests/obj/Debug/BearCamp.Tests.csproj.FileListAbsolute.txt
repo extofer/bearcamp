@@ -37,3 +37,7 @@ C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\obj\Debug\R
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\obj\Debug\BearCamp.Tests.dll
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\obj\Debug\BearCamp.Tests.pdb
 >>>>>>> 201fda7c2a634e160a323e93060dffaf6ec75266
+C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearEF.dll
+C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\EntityFramework.dll
+C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearEF.pdb
+C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\EntityFramework.xml

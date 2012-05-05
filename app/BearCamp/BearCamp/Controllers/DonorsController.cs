@@ -8,11 +8,9 @@ using System.Web.Mvc;
 using BearEF;
 
 namespace BearCamp.Controllers
-{ 
-    public class DonorsController : Controller
+{
+    public class DonorsController : BaseController
     {
-        private bearcampEntities db = new bearcampEntities();
-
         //
         // GET: /Donors/
 

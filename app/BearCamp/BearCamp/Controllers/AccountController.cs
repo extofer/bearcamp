@@ -5,7 +5,7 @@ using BearCamp.Models;
 
 namespace BearCamp.Controllers
 {
-    public class AccountController : Controller
+    public class AccountController : BaseController
     {
 
         //

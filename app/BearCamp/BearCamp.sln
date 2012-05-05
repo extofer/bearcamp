@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BearCamp", "BearCamp\BearCa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BearCamp.Tests", "BearCamp.Tests\BearCamp.Tests.csproj", "{622A10D1-CFCD-4584-8B89-058DB6977FD5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BearEF", "BearEF\BearEF.csproj", "{0123799E-FDD5-4780-B3F7-9244D828008F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{622A10D1-CFCD-4584-8B89-058DB6977FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{622A10D1-CFCD-4584-8B89-058DB6977FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{622A10D1-CFCD-4584-8B89-058DB6977FD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0123799E-FDD5-4780-B3F7-9244D828008F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0123799E-FDD5-4780-B3F7-9244D828008F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0123799E-FDD5-4780-B3F7-9244D828008F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0123799E-FDD5-4780-B3F7-9244D828008F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

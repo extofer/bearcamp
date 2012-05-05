@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bearcampModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="bearcampEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Donors" EntityType="bearcampModel.Donor" />
+    <EntitySet Name="Features" EntityType="bearcampModel.Feature" />
+    <EntitySet Name="Permissions" EntityType="bearcampModel.Permission" />
+    <EntitySet Name="sysdiagrams" EntityType="bearcampModel.sysdiagram" />
+    <EntitySet Name="Users" EntityType="bearcampModel.User" />
+    <AssociationSet Name="FK_Permission_Feature" Association="bearcampModel.FK_Permission_Feature">
+      <End Role="Feature" EntitySet="Features" />
+      <End Role="Permission" EntitySet="Permissions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Permission_Users" Association="bearcampModel.FK_Permission_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Permission" EntitySet="Permissions" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Donor">
+    <Key>
+      <PropertyRef Name="DonorID" />
+    </Key>
+    <Property Name="DonorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FastName" Type="String" MaxLength="52" Unicode="true" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="54" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="52" Unicode="true" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="Address1" Type="String" MaxLength="54" Unicode="true" FixedLength="false" />
+    <Property Name="Address2" Type="String" MaxLength="54" Unicode="true" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="52" Unicode="true" FixedLength="false" />
+    <Property Name="State" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="Zip" Type="String" MaxLength="7" Unicode="false" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="Feature">
+    <Key>
+      <PropertyRef Name="FeatureID" />
+    </Key>
+    <Property Name="FeatureID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FeatureName" Type="String" MaxLength="52" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Permissions" Relationship="bearcampModel.FK_Permission_Feature" FromRole="Feature" ToRole="Permission" />
+  </EntityType>
+  <EntityType Name="Permission">
+    <Key>
+      <PropertyRef Name="PermissionID" />
+    </Key>
+    <Property Name="PermissionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserLogin" Type="String" MaxLength="42" Unicode="true" FixedLength="false" />
+    <Property Name="FeatureID" Type="Int32" />
+    <Property Name="PermissionSort" Type="Int16" />
+    <NavigationProperty Name="Feature" Relationship="bearcampModel.FK_Permission_Feature" FromRole="Permission" ToRole="Feature" />
+    <NavigationProperty Name="User" Relationship="bearcampModel.FK_Permission_Users" FromRole="Permission" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserLogin" />
+    </Key>
+    <Property Name="UserLogin" Type="String" Nullable="false" MaxLength="42" Unicode="true" FixedLength="false" />
+    <Property Name="Pswd" Type="String" Nullable="false" MaxLength="65" Unicode="true" FixedLength="false" />
+    <Property Name="FirstName" Type="String" MaxLength="42" Unicode="true" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="42" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="57" Unicode="true" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <NavigationProperty Name="Permissions" Relationship="bearcampModel.FK_Permission_Users" FromRole="Users" ToRole="Permission" />
+  </EntityType>
+  <Association Name="FK_Permission_Feature">
+    <End Role="Feature" Type="bearcampModel.Feature" Multiplicity="0..1" />
+    <End Role="Permission" Type="bearcampModel.Permission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Feature">
+        <PropertyRef Name="FeatureID" />
+      </Principal>
+      <Dependent Role="Permission">
+        <PropertyRef Name="FeatureID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Permission_Users">
+    <End Role="Users" Type="bearcampModel.User" Multiplicity="0..1" />
+    <End Role="Permission" Type="bearcampModel.Permission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserLogin" />
+      </Principal>
+      <Dependent Role="Permission">
+        <PropertyRef Name="UserLogin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

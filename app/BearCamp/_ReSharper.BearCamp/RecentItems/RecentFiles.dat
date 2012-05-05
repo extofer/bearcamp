@@ -1,11 +1,21 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Content/f:style.css" caret="0" fromTop="0" />
-    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/d:Shared/f:_Layout.cshtml" caret="488" fromTop="12" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/d:Home/f:About.cshtml" caret="0" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Controllers/f:HomeController.cs" caret="0" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/f:Web.config" caret="0" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Models/f:AccountModels.cs" caret="101" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/d:Shared/f:_Layout.cshtml" caret="631" fromTop="16" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/f:_ViewStart.cshtml" caret="0" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/d:Home/f:Index.cshtml" caret="0" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Content/f:style.css" caret="5370" fromTop="18" />
   </RecentFiles>
   <RecentEdits>
     <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Content/f:style.css" caret="0" fromTop="0" />
     <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/d:Shared/f:_Layout.cshtml" caret="327" fromTop="7" />
     <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/d:Shared/f:_Layout.cshtml" caret="521" fromTop="13" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Models/f:AccountModels.cs" caret="44" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/f:_ViewStart.cshtml" caret="40" fromTop="1" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Content/f:style.css" caret="4402" fromTop="12" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Content/f:style.css" caret="5359" fromTop="10" />
   </RecentEdits>
 </RecentFiles>

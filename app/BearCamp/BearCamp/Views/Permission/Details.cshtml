@@ -1,0 +1,31 @@
+﻿@model BearEF.Permission
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Permission</legend>
+
+    <div class="display-label">User</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.User.Pswd)
+    </div>
+
+    <div class="display-label">Feature</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Feature.FeatureName)
+    </div>
+
+    <div class="display-label">PermissionSort</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PermissionSort)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PermissionID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

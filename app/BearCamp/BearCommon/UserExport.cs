@@ -8,7 +8,7 @@ namespace BearCommon
     {
         private readonly bearcampEntities _db = new bearcampEntities();
 
-        public void ExportCsv(string filepath, string sConn)
+        public void ExportCsv()
         {
             var donors = _db.Donors;
             var csv = donors.ToCsv();

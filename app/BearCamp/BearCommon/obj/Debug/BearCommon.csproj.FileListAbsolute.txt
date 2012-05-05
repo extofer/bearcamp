@@ -12,3 +12,7 @@ C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCommon\bin\Debug\BearEF.dll
 C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCommon\bin\Debug\EntityFramework.dll
 C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCommon\bin\Debug\BearEF.pdb
 C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCommon\bin\Debug\EntityFramework.xml
+C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCommon\bin\Debug\BearEF.dll
+C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCommon\bin\Debug\EntityFramework.dll
+C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCommon\bin\Debug\BearEF.pdb
+C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCommon\bin\Debug\EntityFramework.xml

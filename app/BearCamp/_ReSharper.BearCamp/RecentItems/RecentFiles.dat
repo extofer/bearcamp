@@ -7,10 +7,10 @@
     <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Content/f:style.css" caret="5166" fromTop="4" />
     <File id="0123799E-FDD5-4780-B3F7-9244D828008F/f:BearDataModel.Context.cs" caret="898" fromTop="26" />
     <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Controllers/f:HomeController.cs" caret="361" fromTop="13" />
-    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/d:Shared/f:_Layout.cshtml" caret="631" fromTop="16" />
     <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/f:_ViewStart.cshtml" caret="0" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/d:Shared/f:_Layout.cshtml" caret="631" fromTop="16" />
     <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/d:Home/f:Index.cshtml" caret="0" fromTop="0" />
-    <File id="622A10D1-CFCD-4584-8B89-058DB6977FD5/d:Controllers/f:HomeControllerTest.cs" caret="452" fromTop="20" />
+    <File id="622A10D1-CFCD-4584-8B89-058DB6977FD5/d:Controllers/f:HomeControllerTest.cs" caret="181" fromTop="7" />
   </RecentFiles>
   <RecentEdits>
     <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Content/f:style.css" caret="0" fromTop="0" />

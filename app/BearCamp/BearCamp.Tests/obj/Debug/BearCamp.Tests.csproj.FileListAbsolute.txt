@@ -10,7 +10,6 @@ c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp.Tests\bin
 c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp.Tests\obj\Debug\ResolveAssemblyReference.cache
 c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp.Tests\obj\Debug\BearCamp.Tests.dll
 c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp.Tests\obj\Debug\BearCamp.Tests.pdb
-<<<<<<< HEAD
 C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearCamp.Tests.dll.config
 C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearCamp.Tests.dll
 C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearCamp.Tests.pdb
@@ -23,7 +22,6 @@ C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin
 C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\obj\Debug\BearCamp.Tests.dll
 C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\obj\Debug\BearCamp.Tests.pdb
-=======
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearCamp.Tests.dll.config
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearCamp.Tests.dll
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearCamp.Tests.pdb
@@ -36,8 +34,11 @@ C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\n
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\obj\Debug\BearCamp.Tests.dll
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\obj\Debug\BearCamp.Tests.pdb
->>>>>>> 201fda7c2a634e160a323e93060dffaf6ec75266
 C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearEF.dll
 C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\EntityFramework.dll
 C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearEF.pdb
 C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearEF.dll
+C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearEF.pdb
+C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\EntityFramework.xml

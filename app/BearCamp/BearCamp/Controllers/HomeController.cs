@@ -6,11 +6,11 @@ using System.Web.Mvc;
 
 namespace BearCamp.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         public ActionResult Index()
         {
-            ViewBag.Message = "Welcome to ASP.NET MVC!";
+            ViewBag.Message = "Bearcamp Donor Management";
 
             return View();
         }

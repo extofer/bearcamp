@@ -7,6 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 
@@ -27,7 +28,6 @@ namespace BearEF
         public DbSet<Donor> Donors { get; set; }
         public DbSet<Feature> Features { get; set; }
         public DbSet<Permission> Permissions { get; set; }
-        public DbSet<sysdiagram> sysdiagrams { get; set; }
         public DbSet<User> Users { get; set; }
     }
 }

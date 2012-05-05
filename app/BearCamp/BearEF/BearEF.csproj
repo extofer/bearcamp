@@ -71,9 +71,6 @@
       <DependentUpon>BearDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>BearDataModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="User.cs">
       <DependentUpon>BearDataModel.tt</DependentUpon>
     </Compile>

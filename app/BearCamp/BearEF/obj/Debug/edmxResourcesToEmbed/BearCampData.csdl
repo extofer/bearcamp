@@ -4,7 +4,6 @@
     <EntitySet Name="Donors" EntityType="bearcampModel.Donor" />
     <EntitySet Name="Features" EntityType="bearcampModel.Feature" />
     <EntitySet Name="Permissions" EntityType="bearcampModel.Permission" />
-    <EntitySet Name="sysdiagrams" EntityType="bearcampModel.sysdiagram" />
     <EntitySet Name="Users" EntityType="bearcampModel.User" />
     <AssociationSet Name="FK_Permission_Feature" Association="bearcampModel.FK_Permission_Feature">
       <End Role="Feature" EntitySet="Features" />
@@ -48,16 +47,6 @@
     <Property Name="PermissionSort" Type="Int16" />
     <NavigationProperty Name="Feature" Relationship="bearcampModel.FK_Permission_Feature" FromRole="Permission" ToRole="Feature" />
     <NavigationProperty Name="User" Relationship="bearcampModel.FK_Permission_Users" FromRole="Permission" ToRole="Users" />
-  </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="User">
     <Key>

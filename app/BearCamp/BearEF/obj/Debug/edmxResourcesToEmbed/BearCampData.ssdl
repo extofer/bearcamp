@@ -4,7 +4,6 @@
     <EntitySet Name="Donor" EntityType="bearcampModel.Store.Donor" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Feature" EntityType="bearcampModel.Store.Feature" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Permission" EntityType="bearcampModel.Store.Permission" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="sysdiagrams" EntityType="bearcampModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Users" EntityType="bearcampModel.Store.Users" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="FK_Permission_Feature" Association="bearcampModel.Store.FK_Permission_Feature">
       <End Role="Feature" EntitySet="Feature" />
@@ -46,16 +45,6 @@
     <Property Name="FeatureID" Type="int" />
     <Property Name="PermissionSort" Type="smallint" />
   </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
-  </EntityType>
   <EntityType Name="Users">
     <Key>
       <PropertyRef Name="UserLogin" />
@@ -91,4 +80,11 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <!--Errors Found During Generation:
+      warning 6013: The table/view 'bearcamp.dbo.vwPermissions' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+      
+      <EntityType Name="vwPermissions">
+        <Property Name="UserLogin" Type="nvarchar" MaxLength="42" />
+        <Property Name="FeatureName" Type="nvarchar" MaxLength="52" />
+      </EntityType>-->
 </Schema>

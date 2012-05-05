@@ -15,16 +15,27 @@ namespace BearCamp.Controllers
         public bearcampEntities db = new bearcampEntities();
         public string user;
 
-
         protected override void Initialize(RequestContext requestContext)
         {
+            base.Initialize(requestContext);
 
             //var permit = (from p in db.Permissions
             //              where p.FeatureID == 1
             //              select p);
 
+            SomeMethod();
 
         }
+
+
+        public void SomeMethod()
+        {
+            if (1 != 1)
+            {
+                throw new NotImplementedException();
+            }
+        }
+
 
     }
 }

@@ -19,13 +19,13 @@ namespace BearCommon
 
             SqlConnection conn = new SqlConnection(sConn);
 
-            SqlDataAdapter da = new SqlDataAdapter("select * from Users", conn);
+            SqlDataAdapter da = new SqlDataAdapter("select * from Donor", conn);
 
             DataSet ds = new DataSet();
 
-            da.Fill(ds, "Emp");
+            da.Fill(ds, "doner");
 
-            DataTable dt = ds.Tables["Emp"];
+            DataTable dt = ds.Tables["doner"];
 
             CreateCSVFile(dt, filepath); //"c:\\csvData.csv"
 

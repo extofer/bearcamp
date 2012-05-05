@@ -1,11 +1,3 @@
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearEF\bin\Debug\BearEF.dll.config
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearEF\bin\Debug\BearEF.dll
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearEF\bin\Debug\BearEF.pdb
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearEF\bin\Debug\EntityFramework.dll
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearEF\bin\Debug\EntityFramework.xml
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearEF\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearEF\obj\Debug\BearEF.dll
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearEF\obj\Debug\BearEF.pdb
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearEF\bin\Debug\BearEF.dll.config
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearEF\bin\Debug\BearEF.dll
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearEF\bin\Debug\BearEF.pdb
@@ -14,3 +6,11 @@ C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearEF\bin\Debug\EntityFra
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearEF\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearEF\obj\Debug\BearEF.dll
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearEF\obj\Debug\BearEF.pdb
+C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearEF\bin\Debug\BearEF.dll.config
+C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearEF\bin\Debug\BearEF.dll
+C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearEF\bin\Debug\BearEF.pdb
+C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearEF\bin\Debug\EntityFramework.dll
+C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearEF\bin\Debug\EntityFramework.xml
+C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearEF\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearEF\obj\Debug\BearEF.dll
+C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearEF\obj\Debug\BearEF.pdb

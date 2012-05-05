@@ -1,32 +1,34 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/f:Web.config" caret="0" fromTop="0" />
-    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Models/f:AccountModels.cs" caret="101" fromTop="0" />
-    <File id="0123799E-FDD5-4780-B3F7-9244D828008F/f:App.Config" caret="313" fromTop="3" />
-    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/f:Web.config" caret="777" fromTop="10" />
-    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Content/f:style.css" caret="5166" fromTop="4" />
-    <File id="0123799E-FDD5-4780-B3F7-9244D828008F/f:BearDataModel.Context.cs" caret="898" fromTop="26" />
-    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Controllers/f:HomeController.cs" caret="361" fromTop="13" />
+    <File id="622A10D1-CFCD-4584-8B89-058DB6977FD5/f:packages.config" caret="49" fromTop="1" />
+    <File id="622A10D1-CFCD-4584-8B89-058DB6977FD5/f:App.config" caret="0" fromTop="0" />
+    <File id="622A10D1-CFCD-4584-8B89-058DB6977FD5/d:Properties/f:AssemblyInfo.cs" caret="1355" fromTop="7" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Controllers/f:HomeController.cs" caret="0" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Controllers/f:FeatureController.cs" caret="0" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Controllers/f:DonorsController.cs" caret="0" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Controllers/f:BaseController.cs" caret="0" fromTop="0" />
+    <File id="622A10D1-CFCD-4584-8B89-058DB6977FD5/d:Controllers/f:HomeControllerTest.cs" caret="0" fromTop="0" />
+    <File id="622A10D1-CFCD-4584-8B89-058DB6977FD5/f:AccountControllerTest.cs" caret="284" fromTop="13" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/d:Home/f:Index.cshtml" caret="201" fromTop="8" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Content/f:styles.css" caret="0" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Models/f:AccountModels.cs" caret="0" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/d:User/f:Index.cshtml" caret="0" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/d:Shared/f:Error.cshtml" caret="0" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/d:Shared/f:_LogOnPartial.cshtml" caret="0" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/d:Shared/f:_Layout.cshtml" caret="0" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/d:Permission/f:Index.cshtml" caret="0" fromTop="0" />
+    <File id="0123799E-FDD5-4780-B3F7-9244D828008F/f:App.Config" caret="0" fromTop="0" />
+    <File id="0123799E-FDD5-4780-B3F7-9244D828008F/f:BearDataModel.tt" caret="0" fromTop="0" />
     <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/f:_ViewStart.cshtml" caret="0" fromTop="0" />
-    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/d:Shared/f:_Layout.cshtml" caret="631" fromTop="16" />
-    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/d:Home/f:Index.cshtml" caret="0" fromTop="0" />
-    <File id="622A10D1-CFCD-4584-8B89-058DB6977FD5/d:Controllers/f:HomeControllerTest.cs" caret="181" fromTop="7" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/f:Web.config" caret="0" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/f:Global.asax.cs" caret="0" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/f:packages.config" caret="0" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/f:Web.config" caret="0" fromTop="0" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Scripts/f:jquery-1.7.2.js" caret="88266" fromTop="12" />
+    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Scripts/f:jquery-ui-1.8.19.js" caret="282480" fromTop="14" />
   </RecentFiles>
   <RecentEdits>
-    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Content/f:style.css" caret="0" fromTop="0" />
-    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/d:Shared/f:_Layout.cshtml" caret="327" fromTop="7" />
-    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/d:Shared/f:_Layout.cshtml" caret="521" fromTop="13" />
-    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Models/f:AccountModels.cs" caret="44" fromTop="0" />
-    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Views/f:_ViewStart.cshtml" caret="40" fromTop="1" />
-    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Content/f:style.css" caret="4402" fromTop="12" />
-    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Content/f:style.css" caret="5359" fromTop="10" />
-    <File id="0123799E-FDD5-4780-B3F7-9244D828008F/f:App.Config" caret="313" fromTop="3" />
-    <File id="0123799E-FDD5-4780-B3F7-9244D828008F/f:BearDataModel.Context.cs" caret="430" fromTop="4" />
-    <File id="0123799E-FDD5-4780-B3F7-9244D828008F/f:BearDataModel.Context.cs" caret="571" fromTop="8" />
-    <File id="0123799E-FDD5-4780-B3F7-9244D828008F/f:BearDataModel.Context.cs" caret="834" fromTop="6" />
-    <File id="7DD2790E-3056-426D-B0FD-0C8B384D17BA/d:Controllers/f:HomeController.cs" caret="349" fromTop="10" />
-    <File id="622A10D1-CFCD-4584-8B89-058DB6977FD5/d:Controllers/f:HomeControllerTest.cs" caret="648" fromTop="5" />
-    <File id="622A10D1-CFCD-4584-8B89-058DB6977FD5/d:Controllers/f:HomeControllerTest.cs" caret="0" fromTop="0" />
-    <File id="622A10D1-CFCD-4584-8B89-058DB6977FD5/d:Controllers/f:HomeControllerTest.cs" caret="452" fromTop="20" />
+    <File id="622A10D1-CFCD-4584-8B89-058DB6977FD5/f:AccountControllerTest.cs" caret="105" fromTop="4" />
+    <File id="622A10D1-CFCD-4584-8B89-058DB6977FD5/f:AccountControllerTest.cs" caret="284" fromTop="13" />
   </RecentEdits>
 </RecentFiles>

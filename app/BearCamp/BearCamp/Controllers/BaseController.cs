@@ -2,6 +2,7 @@
 using System.Web.Mvc;
 using BearEF;
 using System.Web.Routing;
+using System.Reflection;
 
 namespace BearCamp.Controllers
 {
@@ -18,6 +19,8 @@ namespace BearCamp.Controllers
             //              where p.FeatureID == 1
             //              select p);
 
+            ViewBag.Version = CurrentVersion();
+
             SomeMethod();
 
         }
@@ -30,6 +33,25 @@ namespace BearCamp.Controllers
                 throw new NotImplementedException();
             }
         }
+
+
+        public static string CurrentVersion()
+        {
+            try
+            {
+                
+                System.Version version = Assembly.GetExecutingAssembly().GetName().Version;
+
+                return "BearCamp Donor Management framework for GiveCamps  v" + version.Major + "." + version.Minor + "." + version.Build;
+
+
+            }
+            catch (Exception)
+            {
+                return "?.?.?";
+            }
+        }
+
 
 
     }

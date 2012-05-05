@@ -16,7 +16,7 @@ namespace BearCamp.Controllers
 
         public ViewResult Index()
         {
-            return View(db.Donors.ToList());
+            return View(Db.Donors.ToList());
         }
 
         //
@@ -24,7 +24,7 @@ namespace BearCamp.Controllers
 
         public ViewResult Details(int id)
         {
-            Donor donor = db.Donors.Find(id);
+            Donor donor = Db.Donors.Find(id);
             return View(donor);
         }
 
@@ -44,8 +44,8 @@ namespace BearCamp.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Donors.Add(donor);
-                db.SaveChanges();
+                Db.Donors.Add(donor);
+                Db.SaveChanges();
                 return RedirectToAction("Index");  
             }
 
@@ -57,7 +57,7 @@ namespace BearCamp.Controllers
  
         public ActionResult Edit(int id)
         {
-            Donor donor = db.Donors.Find(id);
+            Donor donor = Db.Donors.Find(id);
             return View(donor);
         }
 
@@ -69,8 +69,8 @@ namespace BearCamp.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(donor).State = EntityState.Modified;
-                db.SaveChanges();
+                Db.Entry(donor).State = EntityState.Modified;
+                Db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(donor);
@@ -81,7 +81,7 @@ namespace BearCamp.Controllers
  
         public ActionResult Delete(int id)
         {
-            Donor donor = db.Donors.Find(id);
+            Donor donor = Db.Donors.Find(id);
             return View(donor);
         }
 
@@ -91,15 +91,15 @@ namespace BearCamp.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {            
-            Donor donor = db.Donors.Find(id);
-            db.Donors.Remove(donor);
-            db.SaveChanges();
+            Donor donor = Db.Donors.Find(id);
+            Db.Donors.Remove(donor);
+            Db.SaveChanges();
             return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
         {
-            db.Dispose();
+            Db.Dispose();
             base.Dispose(disposing);
         }
     }

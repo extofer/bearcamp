@@ -25,17 +25,6 @@ namespace BearCamp.Tests.Controllers
             Assert.That("Welcome to ASP.NET MVC!", Is.EqualTo(result.ViewBag.Message));
         }
 
-        [Test]
-        public void About()
-        {
-            // Arrange
-            HomeController controller = new HomeController();
 
-            // Act
-            ViewResult result = controller.About() as ViewResult;
-
-            // Assert
-            Assert.That(result, Is.Not.Null);
-        }
     }
 }

@@ -1,4 +1,5 @@
 <Modules>
   <Module PersistentId="7DD2790E-3056-426D-B0FD-0C8B384D17BA" ModuleId="BearCamp" />
   <Module PersistentId="0123799E-FDD5-4780-B3F7-9244D828008F" ModuleId="BearEF" />
+  <Module PersistentId="622A10D1-CFCD-4584-8B89-058DB6977FD5" ModuleId="BearCamp.Tests" />
 </Modules>

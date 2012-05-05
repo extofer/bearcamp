@@ -156,7 +156,12 @@ nav a:hover{
 /* ===== Primary Styles ========================================================
    Author:
    ========================================================================== */
-
+#title{ color: black;}
+.page{ background-color: #efefef;width: 800px;margin: 0 auto;padding: 20px;
+       -moz-border-radius: 15px;
+border-radius: 15px;}
+#logindisplay{ float: right;}
+#main{ clear: both;}
 
 
 

@@ -17,7 +17,7 @@ namespace BearCamp.Tests.Controllers
             ViewResult result = controller.Index() as ViewResult;
 
             // Assert
-            Assert.That("Welcome to ASP.NET MVC!", Is.EqualTo(result.ViewBag.Message));
+            Assert.That("Bearcamp Donor Management", Is.EqualTo(result.ViewBag.Message));
         }
 
 

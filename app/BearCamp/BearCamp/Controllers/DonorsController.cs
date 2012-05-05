@@ -7,6 +7,8 @@ using System.Web;
 using System.Web.Mvc;
 using BearEF;
 using System.Web.Routing;
+using System.Configuration;
+using BearCommon;
 
 namespace BearCamp.Controllers
 {
@@ -36,10 +38,29 @@ namespace BearCamp.Controllers
         public ActionResult Create()
         {
             return View();
-        } 
+        }
 
+        public ActionResult ExportUsers()
+        {
+            if (ModelState.IsValid)
+            {
+                UserExport export = new UserExport();
+                string sConn = ConfigurationManager.ConnectionStrings["export2csvConn"].ToString();
+
+                export.ExportCSV("c:\\csvData.csv", sConn);
+
+
+                //db.Users.Add(user);
+                //db.SaveChanges();
+                //return RedirectToAction("Index");
+            }
+
+            return Redirect("/Donors"); //View(db.Users.ToList());
+        }
+    
         //
         // POST: /Donors/Create
+
 
         [HttpPost]
         public ActionResult Create(Donor donor)

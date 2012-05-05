@@ -1,0 +1,12 @@
+c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp.Tests\bin\Debug\BearCamp.Tests.dll.config
+c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp.Tests\bin\Debug\BearCamp.Tests.dll
+c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp.Tests\bin\Debug\BearCamp.Tests.pdb
+c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp.Tests\bin\Debug\BearCamp.dll
+c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp.Tests\bin\Debug\nunit.framework.dll
+c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp.Tests\bin\Debug\nunit.mocks.dll
+c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp.Tests\bin\Debug\pnunit.framework.dll
+c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp.Tests\bin\Debug\BearCamp.pdb
+c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp.Tests\bin\Debug\nunit.framework.xml
+c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp.Tests\obj\Debug\ResolveAssemblyReference.cache
+c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp.Tests\obj\Debug\BearCamp.Tests.dll
+c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp.Tests\obj\Debug\BearCamp.Tests.pdb

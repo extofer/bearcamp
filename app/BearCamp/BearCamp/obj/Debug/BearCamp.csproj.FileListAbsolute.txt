@@ -1,0 +1,7 @@
+c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp\bin\BearCamp.dll
+c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp\bin\BearCamp.pdb
+c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp\bin\EntityFramework.dll
+c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp\bin\EntityFramework.xml
+c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp\obj\Debug\ResolveAssemblyReference.cache
+c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp\obj\Debug\BearCamp.dll
+c:\users\kelly\documents\visual studio 2010\Projects\BearCamp\BearCamp\obj\Debug\BearCamp.pdb

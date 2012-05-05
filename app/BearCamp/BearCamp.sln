@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BearCamp.Tests", "BearCamp.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BearEF", "BearEF\BearEF.csproj", "{0123799E-FDD5-4780-B3F7-9244D828008F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "app", "app", "{072BBD7C-F9F8-48F8-8A31-BB4DBBAFF10B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{370BD172-71A5-4FDB-B21F-65BD18EBBA48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,5 +32,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7DD2790E-3056-426D-B0FD-0C8B384D17BA} = {072BBD7C-F9F8-48F8-8A31-BB4DBBAFF10B}
+		{0123799E-FDD5-4780-B3F7-9244D828008F} = {072BBD7C-F9F8-48F8-8A31-BB4DBBAFF10B}
+		{622A10D1-CFCD-4584-8B89-058DB6977FD5} = {370BD172-71A5-4FDB-B21F-65BD18EBBA48}
 	EndGlobalSection
 EndGlobal

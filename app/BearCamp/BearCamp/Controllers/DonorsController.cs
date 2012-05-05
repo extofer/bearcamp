@@ -42,7 +42,7 @@ namespace BearCamp.Controllers
                 var export = new UserExport();
                 string sConn = ConfigurationManager.ConnectionStrings["export2csvConn"].ToString();
 
-                export.ExportCSV("c:\\csvData.csv", sConn);
+                export.ExportCsv("c:\\csvData.csv", sConn);
 
 
                 //db.Users.Add(user);

@@ -8,3 +8,7 @@ C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCommon\bin\Debug\BearCommon.pdb
 C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCommon\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCommon\obj\Debug\BearCommon.dll
 C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCommon\obj\Debug\BearCommon.pdb
+C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCommon\bin\Debug\BearEF.dll
+C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCommon\bin\Debug\EntityFramework.dll
+C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCommon\bin\Debug\BearEF.pdb
+C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCommon\bin\Debug\EntityFramework.xml

@@ -7,24 +7,27 @@
 <script type="text/javascript">
     $(document).ready(function() {
 
-        $('#donortable tr:even').addClass('even');
+        $('#donortable tr:even').css("background-color", "#A5BFDD");
     });
 </script>
 <h2>
     Donor List</h2>
+    <p>
+    @Html.ActionLink("Create New", "Create") | @Html.ActionLink("Export List", "ExportUsers")
+</p>
 <table id="donortable">
 
     @foreach (Donor item in Model)
     {
         <tr>
             <td>
-                Name: @Html.DisplayFor(modelItem => item.LastName), @Html.DisplayFor(modelItem => item.FastName)<br />
-                E-Mail: @Html.DisplayFor(modelItem => item.Email)<br />
-                Phone: @Html.DisplayFor(modelItem => item.Phone)
+                <strong>Name:</strong> @Html.DisplayFor(modelItem => item.LastName), @Html.DisplayFor(modelItem => item.FastName)<br />
+                <strong>E-Mail:</strong> @Html.DisplayFor(modelItem => item.Email)<br />
+                <strong>Phone:</strong> @Html.DisplayFor(modelItem => item.Phone)
                 <br />
-                Address1: @Html.DisplayFor(modelItem => item.Address1)<br />
-                Address2: @Html.DisplayFor(modelItem => item.Address2)<br />
-                City/State/Zip: @Html.DisplayFor(modelItem => item.City) @Html.DisplayFor(modelItem => item.State)
+                <strong>Address1:</strong> @Html.DisplayFor(modelItem => item.Address1)<br />
+                <strong>Address2:</strong> @Html.DisplayFor(modelItem => item.Address2)<br />
+                <strong>City/State/Zip:</strong> @Html.DisplayFor(modelItem => item.City) @Html.DisplayFor(modelItem => item.State)
                 @Html.DisplayFor(modelItem => item.Zip)<br/>
                 <a href="@Url.Action("Edit", "Donors", new { id = item.DonorID })" title="Edit Donor">
                     <img src="../../Content/images/application_edit.png" /></a> | <a href="@Url.Action("Details", "Donors", new { id = item.DonorID })" title="View Donor">
@@ -35,5 +38,5 @@
     }
 </table>
 <p>
-    @Html.ActionLink("Create New", "Create") @Html.ActionLink("Export", "ExportUsers")
+    @Html.ActionLink("Create New", "Create") | @Html.ActionLink("Export List", "ExportUsers")
 </p>

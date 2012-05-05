@@ -5,3 +5,4 @@ To create the BearCamp database, run the following scripts in this order:
 3		CreateFeature.sql
 4		CreatePermission.sql
 5		CreateDonor.sql
+6		AdminSetup.sql

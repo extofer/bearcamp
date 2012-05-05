@@ -1,0 +1,5 @@
+C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearEF\bin\Debug\BearEF.dll
+C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearEF\bin\Debug\BearEF.pdb
+C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearEF\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearEF\obj\Debug\BearEF.dll
+C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearEF\obj\Debug\BearEF.pdb

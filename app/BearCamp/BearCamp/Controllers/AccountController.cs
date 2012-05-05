@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Web.Mvc;
 using System.Web.Security;
 using BearCamp.Models;
@@ -24,7 +25,7 @@ namespace BearCamp.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (Membership.ValidateUser(model.UserName, model.Password))
+                if(AuthenticateUser(model.UserName, model.Password))
                 {
                     FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
                     if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
@@ -39,6 +40,12 @@ namespace BearCamp.Controllers
 
             // If we got this far, something failed, redisplay form
             return View(model);
+        }
+
+        private bool AuthenticateUser(string userName, string password)
+        {
+            var users = Db.Users.Where(p => p.UserLogin == userName).Where(p => p.Pswd == password);
+            return users.Any();
         }
 
         //

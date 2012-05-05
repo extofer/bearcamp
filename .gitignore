@@ -1,3 +1,4 @@
+
 BearEF.dll
 BearED.pdb
 BearCamp.dll
@@ -6,7 +7,6 @@ app/BearCamp/BearCamp/obj/Debug/BearCamp.pdb
 app/BearCamp/BearCamp.suo
 app/BearCamp/BearCamp.suo
 app/BearCamp/BearCamp.suo
-app/BearCamp/BearCamp/Web.config
 app/BearCamp/BearCamp.Tests/bin/Debug/BearCamp.Tests.dll
 app/BearCamp/BearCamp.Tests/bin/Debug/BearCamp.Tests.dll
 app/BearCamp/BearCamp.Tests/bin/Debug/BearCamp.Tests.pdb

@@ -10,18 +10,17 @@
 <body>
     <div class="page">
         <header>
-            <div id="title">
-                <h1>Hello Baby!</h1>
-            </div>
-            <div id="logindisplay">
-                @Html.Partial("_LogOnPartial")
-            </div>
             <nav>
                 <ul id="menu">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Donors", "Index", "Donors")</li>
                 </ul>
             </nav>
+          
+            <div id="logindisplay">
+                @Html.Partial("_LogOnPartial")
+            </div>
+            
         </header>
         <section id="main">
             @RenderBody()

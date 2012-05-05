@@ -29,5 +29,7 @@ namespace BearEF
         public DbSet<Feature> Features { get; set; }
         public DbSet<Permission> Permissions { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Donation> Donations { get; set; }
+        public DbSet<DonationTypeID> DonationTypeIDs { get; set; }
     }
 }

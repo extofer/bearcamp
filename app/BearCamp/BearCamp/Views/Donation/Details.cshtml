@@ -1,0 +1,46 @@
+﻿@model BearEF.Donation
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Donation</legend>
+
+    <div class="display-label">DonationsID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DonationsID)
+    </div>
+
+    <div class="display-label">Donor</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Donor.FastName)
+    </div>
+
+    <div class="display-label">DonationAmount</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DonationAmount)
+    </div>
+
+    <div class="display-label">DonataionDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DonataionDate)
+    </div>
+
+    <div class="display-label">Comments</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Comments)
+    </div>
+
+    <div class="display-label">DonationTypeID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DonationTypeID.DonationDesc)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

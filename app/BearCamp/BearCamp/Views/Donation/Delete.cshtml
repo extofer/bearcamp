@@ -1,0 +1,49 @@
+﻿@model BearEF.Donation
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Donation</legend>
+
+    <div class="display-label">DonationsID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DonationsID)
+    </div>
+
+    <div class="display-label">Donor</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Donor.FastName)
+    </div>
+
+    <div class="display-label">DonationAmount</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DonationAmount)
+    </div>
+
+    <div class="display-label">DonataionDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DonataionDate)
+    </div>
+
+    <div class="display-label">Comments</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Comments)
+    </div>
+
+    <div class="display-label">DonationTypeID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DonationTypeID.DonationDesc)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

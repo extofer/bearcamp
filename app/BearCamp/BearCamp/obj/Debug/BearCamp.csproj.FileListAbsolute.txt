@@ -14,17 +14,6 @@ C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp\bin\EntityFramewo
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp\obj\Debug\BearCamp.dll
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp\obj\Debug\BearCamp.pdb
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp\bin\BearCamp.dll
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp\bin\BearCamp.pdb
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp\bin\BearCommon.dll
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp\bin\BearEF.dll
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp\bin\EntityFramework.dll
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp\bin\BearCommon.pdb
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp\bin\BearEF.pdb
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp\bin\EntityFramework.xml
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp\obj\Debug\BearCamp.dll
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp\obj\Debug\BearCamp.pdb
 C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCamp\bin\BearCamp.dll
 C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCamp\bin\BearCamp.pdb
 C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCamp\bin\BearCommon.dll

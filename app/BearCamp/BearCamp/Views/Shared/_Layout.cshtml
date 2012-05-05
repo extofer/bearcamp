@@ -10,13 +10,14 @@
 <body>
     <div class="page">
         <header>
-            <nav>
+        <div id="title">
                 <ul id="menu">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Donors", "Index", "Donors")</li>
                 </ul>
-            </nav>
           
+              
+            </div>
             <div id="logindisplay">
                 @Html.Partial("_LogOnPartial")
             </div>

@@ -1,0 +1,21 @@
+﻿@model BearEF.Feature
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Feature</legend>
+
+    <div class="display-label">FeatureName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FeatureName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.FeatureID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

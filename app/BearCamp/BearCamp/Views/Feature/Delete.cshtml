@@ -1,0 +1,24 @@
+﻿@model BearEF.Feature
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Feature</legend>
+
+    <div class="display-label">FeatureName</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FeatureName)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

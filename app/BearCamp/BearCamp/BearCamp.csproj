@@ -76,12 +76,16 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\add.png" />
     <Content Include="Content\images\apple-touch-icon-114x114-precomposed.png" />
     <Content Include="Content\images\apple-touch-icon-57x57-precomposed.png" />
     <Content Include="Content\images\apple-touch-icon-72x72-precomposed.png" />
     <Content Include="Content\images\apple-touch-icon-precomposed.png" />
     <Content Include="Content\images\apple-touch-icon.png" />
+    <Content Include="Content\images\application_edit.png" />
+    <Content Include="Content\images\delete.png" />
     <Content Include="Content\images\favicon.ico" />
+    <Content Include="Content\images\magnifier.png" />
     <Content Include="Content\styles.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />

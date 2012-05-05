@@ -161,15 +161,14 @@ nav a:hover{
        -moz-border-radius: 15px;
 border-radius: 15px;margin-top: 10px;}
 #logindisplay{ float: right;}
-#main{ clear: both;padding-left:20px}
+#main{ clear: both;padding-left: 20px;border-top:2px solid #000000}
 
 #title ul{
 margin: 0;
 padding: 0;
 list-style-type: none;
 text-align: center;
-   
-    float: left;
+float: left;
 }
 
 #title  ul li { display: inline; }
@@ -188,8 +187,22 @@ color: #fff;
 background-color: #369;
 }
 
+#donortable {
+    width:100%  
+}
 
+#donortable th {
+    padding: 10px;
+    border: 1px solid black;
+    background: #036;
+    font-size: 9pt;
+    color: white;
+    
+}
 
+#donortable tr .even {
+    background: white;
+}
 
 
 

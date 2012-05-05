@@ -1,19 +1,15 @@
-﻿@model IEnumerable<BearEF.Donor>
-
+﻿@using BearEF
+@model IEnumerable<BearEF.Donor>
 @{
     ViewBag.Title = "Bearcamp - Donor List";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-
-<h2>Donor List</h2>
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table>
-
+<h2>
+    Donor List</h2>
+<table id="donortable">
     <tr>
+        <th>
+        </th>
         <th>
             Fast Name
         </th>
@@ -41,43 +37,46 @@
         <th>
             Zip
         </th>
-        <th></th>
     </tr>
+    @foreach (Donor item in Model)
+    {
+        <tr>
+            <td>
+                <a href="@Url.Action("Edit","Donors", new {id = item.DonorID})" title="Edit Donor"><img src="../../Content/images/application_edit.png"/></a>
+                | <a href="@Url.Action("Details","Donors", new {id = item.DonorID})" title="View Donor"><img src="../../Content/images/magnifier.png"/></a>
+                | <a href="@Url.Action("Delete","Donors", new {id = item.DonorID})" title="Delete Donor"><img src="../../Content/images/delete.png"/></a>
 
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            Donor
-            <br/>
-            First Name: @Html.DisplayFor(modelItem => item.FastName)
-            <br/>
-            Last Name: @Html.DisplayFor(modelItem => item.LastName)
-            <br/>
-            E-Mail: @Html.DisplayFor(modelItem => item.Email)
-            <br/>
-            Phone: @Html.DisplayFor(modelItem => item.Phone)
-            <br/>
-            Address 1: @Html.DisplayFor(modelItem => item.Address1)
-            <br/>
-            Address 2: @Html.DisplayFor(modelItem => item.Address2)
-            <br/>
-            City: @Html.DisplayFor(modelItem => item.City)
-            <br/>
-            State: @Html.DisplayFor(modelItem => item.State)
-            <br/>
-            Zip: 
-
-       
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.DonorID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.DonorID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.DonorID })
-        </td>
-    </tr>
-}
-
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.State)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zip)
+            </td>
+        </tr>
+    }
 </table>
-
-
-@Html.ActionLink("Export", "ExportUsers")
+<p>
+    @Html.ActionLink("Create New", "Create") @Html.ActionLink("Export", "ExportUsers")
+</p>

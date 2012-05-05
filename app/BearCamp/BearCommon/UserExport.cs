@@ -23,9 +23,9 @@ namespace BearCommon
 
             DataSet ds = new DataSet();
 
-            da.Fill(ds, "doner");
+            da.Fill(ds, "boner");
 
-            DataTable dt = ds.Tables["doner"];
+            DataTable dt = ds.Tables["boner"];
 
             CreateCSVFile(dt, filepath); //"c:\\csvData.csv"
 

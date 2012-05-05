@@ -60,4 +60,22 @@ namespace BearCamp.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
     }
+
+    public class DonorModel
+    {
+        [Required]
+        [Display(Name = "First name")]
+        public string FastName { get; set; }
+
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
+        public string Address1 { get; set; }
+        public string Address2 { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string Zip { get; set; }
+
+        
+    }
 }

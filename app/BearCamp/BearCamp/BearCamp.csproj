@@ -182,6 +182,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BearCommon\BearCommon.csproj">
+      <Project>{42472B08-81E5-425D-B304-EDECC85EA980}</Project>
+      <Name>BearCommon</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BearEF\BearEF.csproj">
       <Project>{0123799E-FDD5-4780-B3F7-9244D828008F}</Project>
       <Name>BearEF</Name>

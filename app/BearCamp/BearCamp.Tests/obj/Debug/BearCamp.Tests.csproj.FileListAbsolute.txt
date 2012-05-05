@@ -42,3 +42,5 @@ C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\E
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\obj\Debug\BearCamp.Tests.dll
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\obj\Debug\BearCamp.Tests.pdb
+C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearCommon.dll
+C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearCommon.pdb

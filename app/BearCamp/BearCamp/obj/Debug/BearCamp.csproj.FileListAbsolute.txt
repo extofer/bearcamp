@@ -23,3 +23,5 @@ C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp\bin\EntityFramewo
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp\obj\Debug\BearCamp.dll
 C:\Users\Kelly\Desktop\Bearcamp\bearcamp\app\BearCamp\BearCamp\obj\Debug\BearCamp.pdb
+C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp\bin\BearCommon.dll
+C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCamp\bin\BearCommon.pdb

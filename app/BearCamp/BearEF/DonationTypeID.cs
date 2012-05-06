@@ -12,23 +12,15 @@ using System.Collections.Generic;
 
 namespace BearEF
 {
-    public partial class Donor
+    public partial class DonationTypeID
     {
-        public Donor()
+        public DonationTypeID()
         {
             this.Donations = new HashSet<Donation>();
         }
     
-        public int DonorID { get; set; }
-        public string FastName { get; set; }
-        public string LastName { get; set; }
-        public string Email { get; set; }
-        public string Phone { get; set; }
-        public string Address1 { get; set; }
-        public string Address2 { get; set; }
-        public string City { get; set; }
-        public string State { get; set; }
-        public string Zip { get; set; }
+        public int DonationTypeID1 { get; set; }
+        public string DonationDesc { get; set; }
     
         public virtual ICollection<Donation> Donations { get; set; }
     }

@@ -6,10 +6,20 @@
     <edmx:StorageModels>
     <Schema Namespace="bearcampModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="bearcampModelStoreContainer">
+          <EntitySet Name="Donations" EntityType="bearcampModel.Store.Donations" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DonationTypeID" EntityType="bearcampModel.Store.DonationTypeID" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Donor" EntityType="bearcampModel.Store.Donor" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Feature" EntityType="bearcampModel.Store.Feature" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Permission" EntityType="bearcampModel.Store.Permission" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Users" EntityType="bearcampModel.Store.Users" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Donations_DonationTypeID" Association="bearcampModel.Store.FK_Donations_DonationTypeID">
+            <End Role="DonationTypeID" EntitySet="DonationTypeID" />
+            <End Role="Donations" EntitySet="Donations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Donations_Donor" Association="bearcampModel.Store.FK_Donations_Donor">
+            <End Role="Donor" EntitySet="Donor" />
+            <End Role="Donations" EntitySet="Donations" />
+          </AssociationSet>
           <AssociationSet Name="FK_Permission_Feature" Association="bearcampModel.Store.FK_Permission_Feature">
             <End Role="Feature" EntitySet="Feature" />
             <End Role="Permission" EntitySet="Permission" />
@@ -19,6 +29,24 @@
             <End Role="Permission" EntitySet="Permission" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Donations">
+          <Key>
+            <PropertyRef Name="DonationsID" />
+          </Key>
+          <Property Name="DonationsID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DonorID" Type="int" Nullable="false" />
+          <Property Name="DonationAmount" Type="money" Nullable="false" />
+          <Property Name="DonataionDate" Type="date" Nullable="false" />
+          <Property Name="Comments" Type="nvarchar" MaxLength="343" />
+          <Property Name="DonationType" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DonationTypeID">
+          <Key>
+            <PropertyRef Name="DonationTypeID" />
+          </Key>
+          <Property Name="DonationTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DonationDesc" Type="nvarchar" Nullable="false" MaxLength="67" />
+        </EntityType>
         <EntityType Name="Donor">
           <Key>
             <PropertyRef Name="DonorID" />
@@ -61,6 +89,30 @@
           <Property Name="Email" Type="nvarchar" MaxLength="57" />
           <Property Name="Phone" Type="nchar" MaxLength="10" />
         </EntityType>
+        <Association Name="FK_Donations_DonationTypeID">
+          <End Role="DonationTypeID" Type="bearcampModel.Store.DonationTypeID" Multiplicity="1" />
+          <End Role="Donations" Type="bearcampModel.Store.Donations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DonationTypeID">
+              <PropertyRef Name="DonationTypeID" />
+            </Principal>
+            <Dependent Role="Donations">
+              <PropertyRef Name="DonationType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Donations_Donor">
+          <End Role="Donor" Type="bearcampModel.Store.Donor" Multiplicity="1" />
+          <End Role="Donations" Type="bearcampModel.Store.Donations" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Donor">
+              <PropertyRef Name="DonorID" />
+            </Principal>
+            <Dependent Role="Donations">
+              <PropertyRef Name="DonorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Permission_Feature">
           <End Role="Feature" Type="bearcampModel.Store.Feature" Multiplicity="0..1" />
           <End Role="Permission" Type="bearcampModel.Store.Permission" Multiplicity="*" />
@@ -85,13 +137,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <!--Errors Found During Generation:
-      warning 6013: The table/view 'bearcamp.dbo.vwPermissions' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-      
-      <EntityType Name="vwPermissions">
-        <Property Name="UserLogin" Type="nvarchar" MaxLength="42" />
-        <Property Name="FeatureName" Type="nvarchar" MaxLength="52" />
-      </EntityType>-->
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -109,7 +154,17 @@
             <End Role="Users" EntitySet="Users" />
             <End Role="Permission" EntitySet="Permissions" />
           </AssociationSet>
-        </EntityContainer>
+          <EntitySet Name="Donations" EntityType="bearcampModel.Donation" />
+          <EntitySet Name="DonationTypeIDs" EntityType="bearcampModel.DonationTypeID" />
+          <AssociationSet Name="FK_Donations_DonationTypeID" Association="bearcampModel.FK_Donations_DonationTypeID">
+            <End Role="DonationTypeID" EntitySet="DonationTypeIDs" />
+            <End Role="Donation" EntitySet="Donations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Donations_Donor" Association="bearcampModel.FK_Donations_Donor">
+            <End Role="Donor" EntitySet="Donors" />
+            <End Role="Donation" EntitySet="Donations" />
+          </AssociationSet>
+          </EntityContainer>
         <EntityType Name="Donor">
           <Key>
             <PropertyRef Name="DonorID" />
@@ -124,6 +179,7 @@
           <Property Name="City" Type="String" MaxLength="52" Unicode="true" FixedLength="false" />
           <Property Name="State" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
           <Property Name="Zip" Type="String" MaxLength="7" Unicode="false" FixedLength="true" />
+          <NavigationProperty Name="Donations" Relationship="bearcampModel.FK_Donations_Donor" FromRole="Donor" ToRole="Donation" />
         </EntityType>
         <EntityType Name="Feature">
           <Key>
@@ -180,7 +236,52 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        <EntityType Name="Donation">
+          <Key>
+            <PropertyRef Name="DonationsID" />
+          </Key>
+          <Property Type="Int32" Name="DonationsID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="DonorID" Nullable="false" />
+          <Property Type="Decimal" Name="DonationAmount" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="DateTime" Name="DonataionDate" Nullable="false" />
+          <Property Type="String" Name="Comments" MaxLength="343" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DonationType" Nullable="false" />
+          <NavigationProperty Name="DonationTypeID" Relationship="bearcampModel.FK_Donations_DonationTypeID" FromRole="Donation" ToRole="DonationTypeID" />
+          <NavigationProperty Name="Donor" Relationship="bearcampModel.FK_Donations_Donor" FromRole="Donation" ToRole="Donor" />
+        </EntityType>
+        <EntityType Name="DonationTypeID">
+          <Key>
+            <PropertyRef Name="DonationTypeID1" />
+          </Key>
+          <Property Type="Int32" Name="DonationTypeID1" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="DonationDesc" Nullable="false" MaxLength="67" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Donations" Relationship="bearcampModel.FK_Donations_DonationTypeID" FromRole="DonationTypeID" ToRole="Donation" />
+        </EntityType>
+        <Association Name="FK_Donations_DonationTypeID">
+          <End Type="bearcampModel.DonationTypeID" Role="DonationTypeID" Multiplicity="1" />
+          <End Type="bearcampModel.Donation" Role="Donation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DonationTypeID">
+              <PropertyRef Name="DonationTypeID1" />
+            </Principal>
+            <Dependent Role="Donation">
+              <PropertyRef Name="DonationType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Donations_Donor">
+          <End Type="bearcampModel.Donor" Role="Donor" Multiplicity="1" />
+          <End Type="bearcampModel.Donation" Role="Donation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Donor">
+              <PropertyRef Name="DonorID" />
+            </Principal>
+            <Dependent Role="Donation">
+              <PropertyRef Name="DonorID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -216,7 +317,27 @@
             <ScalarProperty Name="Email" ColumnName="Email" />
             <ScalarProperty Name="Phone" ColumnName="Phone" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-        </EntityContainerMapping>
+          <EntitySetMapping Name="Donations">
+            <EntityTypeMapping TypeName="bearcampModel.Donation">
+              <MappingFragment StoreEntitySet="Donations">
+                <ScalarProperty Name="DonationType" ColumnName="DonationType" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="DonataionDate" ColumnName="DonataionDate" />
+                <ScalarProperty Name="DonationAmount" ColumnName="DonationAmount" />
+                <ScalarProperty Name="DonorID" ColumnName="DonorID" />
+                <ScalarProperty Name="DonationsID" ColumnName="DonationsID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DonationTypeIDs">
+            <EntityTypeMapping TypeName="bearcampModel.DonationTypeID">
+              <MappingFragment StoreEntitySet="DonationTypeID">
+                <ScalarProperty Name="DonationDesc" ColumnName="DonationDesc" />
+                <ScalarProperty Name="DonationTypeID1" ColumnName="DonationTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>
@@ -231,13 +352,13 @@
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="True" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="BearCampData" ZoomLevel="81">
+      <Diagram Name="BearCampData" ZoomLevel="98">
         <EntityTypeShape EntityType="bearcampModel.Donor" Width="1.5" PointX="2.75" PointY="4.75" Height="2.9417936197916674" IsExpanded="true" />
         <EntityTypeShape EntityType="bearcampModel.Feature" Width="1.5" PointX="0.75" PointY="1.25" Height="1.5956835937499996" IsExpanded="true" />
         <EntityTypeShape EntityType="bearcampModel.Permission" Width="1.5" PointX="3" PointY="0.875" Height="2.1725878906249996" IsExpanded="true" />
@@ -253,7 +374,18 @@
           <ConnectorPoint PointX="3.75" PointY="4.5" />
           <ConnectorPoint PointX="3.75" PointY="3.0475878906249996" />
         </AssociationConnector>
-      </Diagram>
+        <EntityTypeShape EntityType="bearcampModel.Donation" Width="1.5" PointX="5" PointY="5" Height="2.5571907552083317" />
+        <EntityTypeShape EntityType="bearcampModel.DonationTypeID" Width="1.5" PointX="2.75" PointY="9.5" Height="1.5956835937499996" />
+        <AssociationConnector Association="bearcampModel.FK_Donations_DonationTypeID" >
+          <ConnectorPoint PointX="4.25" PointY="10.297841796875" />
+          <ConnectorPoint PointX="5.75" PointY="10.297841796875" />
+          <ConnectorPoint PointX="5.75" PointY="7.5571907552083317" />
+        </AssociationConnector>
+        <AssociationConnector Association="bearcampModel.FK_Donations_Donor" >
+          <ConnectorPoint PointX="4.25" PointY="6.2785953776041659" />
+          <ConnectorPoint PointX="5" PointY="6.2785953776041659" />
+        </AssociationConnector>
+        </Diagram>
     </Diagrams>
   </Designer>
 </edmx:Edmx>

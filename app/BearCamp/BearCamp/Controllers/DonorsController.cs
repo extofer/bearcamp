@@ -40,9 +40,9 @@ namespace BearCamp.Controllers
             if (ModelState.IsValid)
             {
                 var export = new UserExport();
-                string sConn = ConfigurationManager.ConnectionStrings["export2csvConn"].ToString();
+                //string sConn = ConfigurationManager.ConnectionStrings["export2csvConn"].ToString();
 
-                export.ExportCsv("c:\\csvData.csv", sConn);
+                export.ExportCsv();
 
 
                 //db.Users.Add(user);

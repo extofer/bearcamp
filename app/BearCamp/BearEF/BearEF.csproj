@@ -61,6 +61,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BearDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Donation.cs">
+      <DependentUpon>BearDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DonationTypeID.cs">
+      <DependentUpon>BearDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Donor.cs">
       <DependentUpon>BearDataModel.tt</DependentUpon>
     </Compile>

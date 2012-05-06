@@ -1,0 +1,64 @@
+﻿@model IEnumerable<BearEF.Donation>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            DonationsID
+        </th>
+        <th>
+            Donor
+        </th>
+        <th>
+            DonationAmount
+        </th>
+        <th>
+            DonataionDate
+        </th>
+        <th>
+            Comments
+        </th>
+        <th>
+            DonationTypeID
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonationsID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Donor.FastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonationAmount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonataionDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonationTypeID.DonationDesc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

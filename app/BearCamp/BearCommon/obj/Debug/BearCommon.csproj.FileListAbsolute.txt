@@ -1,8 +1,3 @@
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCommon\bin\Debug\BearCommon.dll
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCommon\bin\Debug\BearCommon.pdb
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCommon\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCommon\obj\Debug\BearCommon.dll
-C:\Users\extofer\Documents\Dev\bearcamp\bearcamp\app\BearCamp\BearCommon\obj\Debug\BearCommon.pdb
 C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCommon\bin\Debug\BearCommon.dll
 C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCommon\bin\Debug\BearCommon.pdb
 C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCommon\obj\Debug\ResolveAssemblyReference.cache

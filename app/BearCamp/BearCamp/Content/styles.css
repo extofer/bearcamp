@@ -205,6 +205,10 @@ background-color: #369;
     padding: 10px;
 }
 
+#usertable td {
+    padding: 10px;
+}
+
 #menu{ float: right;width:850px}
 
 

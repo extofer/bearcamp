@@ -4,55 +4,29 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<script type="text/javascript">
+    $(document).ready(function () {
 
-<h2>Index</h2>
+        $('#usertable tr:even').css("background-color", "#A5BFDD");
+    });
+</script>
+<h2>Users</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table>
-    <tr>
-        <th>
-            User Login
-        </th>
-        <th>
-            Pswd
-        </th>
-        <th>
-            First Name
-        </th>
-        <th>
-            Last Name
-        </th>
-        <th>
-            Email
-        </th>
-        <th>
-            Phone
-        </th>
-        <th></th>
-    </tr>
+
+<table id="usertable" style="width:100%;">
 
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.UserLogin)
+            <strong>Login Name:</strong> @Html.DisplayFor(modelItem => item.UserLogin)<br/>
+            <strong>Password:</strong> @Html.DisplayFor(modelItem => item.Pswd)<br/>
+            <strong>First Name:</strong> @Html.DisplayFor(modelItem => item.FirstName)<br/>
+            <strong>Last Name:</strong> @Html.DisplayFor(modelItem => item.LastName)<br/>
+            <strong>E-Mail:</strong> @Html.DisplayFor(modelItem => item.Email)<br/>
+            <strong>Phone:</strong> @Html.DisplayFor(modelItem => item.Phone)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Pswd)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Phone)
-        </td>
+    </tr>
+    <tr>
         <td>
             @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
             @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
@@ -62,4 +36,6 @@
 }
 
 </table>
-
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>

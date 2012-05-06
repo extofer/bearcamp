@@ -82,4 +82,25 @@ namespace BearCamp.Models
         [Display(Name = "Donation Description")]
         public string DonationDesc{ get; set; }
     }
+
+    public class User
+    {
+        [Display(Name="User Login")]
+        public string UserLogin { get; set; }
+
+        [Display(Name = "Password")]
+        public string Pswd { get; set; }
+
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [Display(Name= "Last Name")]
+        public string LastName { get; set; }
+        
+        [Display(Name="Email")]
+        public string Email { get; set; }
+        
+        [Display(Name = "Phone")]
+        public string Phone { get; set; }
+    }
 }

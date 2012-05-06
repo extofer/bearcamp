@@ -13,9 +13,6 @@
 <table>
     <tr>
         <th>
-            DonationsID
-        </th>
-        <th>
             Donor
         </th>
         <th>
@@ -35,9 +32,6 @@
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.DonationsID)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.Donor.FastName)
         </td>

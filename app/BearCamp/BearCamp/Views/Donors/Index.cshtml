@@ -21,14 +21,14 @@
     {
         <tr>
             <td>
-                <strong>Name:</strong> @Html.DisplayFor(modelItem => item.LastName), @Html.DisplayFor(modelItem => item.FastName)<br />
-                <strong>E-Mail:</strong> @Html.DisplayFor(modelItem => item.Email)<br />
+                <strong>Name:</strong> @Html.DisplayFor(modelItem => item.LastName), @Html.DisplayFor(modelItem => item.FastName)<br /><br />
+                <strong>E-Mail:</strong> @Html.DisplayFor(modelItem => item.Email)<br /><br />
                 <strong>Phone:</strong> @Html.DisplayFor(modelItem => item.Phone)
-                <br />
-                <strong>Address1:</strong> @Html.DisplayFor(modelItem => item.Address1)<br />
-                <strong>Address2:</strong> @Html.DisplayFor(modelItem => item.Address2)<br />
+                <br /><br />
+                <strong>Address1:</strong> @Html.DisplayFor(modelItem => item.Address1)<br /><br />
+                <strong>Address2:</strong> @Html.DisplayFor(modelItem => item.Address2)<br /><br />
                 <strong>City/State/Zip:</strong> @Html.DisplayFor(modelItem => item.City) @Html.DisplayFor(modelItem => item.State)
-                @Html.DisplayFor(modelItem => item.Zip)<br/>
+                @Html.DisplayFor(modelItem => item.Zip)<br/><br />
                 <a href="@Url.Action("Edit", "Donors", new { id = item.DonorID })" title="Edit Donor">
                     <img src="../../Content/images/application_edit.png" /></a> | <a href="@Url.Action("Details", "Donors", new { id = item.DonorID })" title="View Donor">
                         <img src="../../Content/images/magnifier.png" /></a> | <a href="@Url.Action("Delete", "Donors", new { id = item.DonorID })" title="Delete Donor">

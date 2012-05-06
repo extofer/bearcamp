@@ -9,51 +9,17 @@
 
 <fieldset>
     <legend>Donor</legend>
+    
+    <strong>Name:</strong> @Html.DisplayFor(modelItem => modelItem.LastName), @Html.DisplayFor(modelItem => modelItem.FastName)<br />
+                <strong>E-Mail:</strong> @Html.DisplayFor(modelItem => modelItem.Email)<br />
+                <strong>Phone:</strong> @Html.DisplayFor(modelItem => modelItem.Phone)
+                <br />
+                <strong>Address1:</strong> @Html.DisplayFor(modelItem => modelItem.Address1)<br />
+                <strong>Address2:</strong> @Html.DisplayFor(modelItem => modelItem.Address2)<br />
+                <strong>City/State/Zip:</strong> @Html.DisplayFor(modelItem => modelItem.City) @Html.DisplayFor(modelItem => modelItem.State)
+                @Html.DisplayFor(modelItem => modelItem.Zip)<br/>
 
-    <div class="display-label">FastName</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.FastName)
-    </div>
-
-    <div class="display-label">LastName</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.LastName)
-    </div>
-
-    <div class="display-label">Email</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Email)
-    </div>
-
-    <div class="display-label">Phone</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Phone)
-    </div>
-
-    <div class="display-label">Address1</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Address1)
-    </div>
-
-    <div class="display-label">Address2</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Address2)
-    </div>
-
-    <div class="display-label">City</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.City)
-    </div>
-
-    <div class="display-label">State</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.State)
-    </div>
-
-    <div class="display-label">Zip</div>
-    <div class="display-field">
-        @Html.DisplayFor(model => model.Zip)
-    </div>
+    
 </fieldset>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id=Model.DonorID }) |

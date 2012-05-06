@@ -25,3 +25,5 @@ app/BearCamp/BearCamp.Tests/bin/Debug/BearCommon.dll
 app/BearCamp/BearCamp.Tests/bin/Debug/BearCommon.pdb
 app/BearCamp/BearCamp.Tests/obj/Debug/BearCamp.Tests.dll
 app/BearCamp/BearCamp.Tests/obj/Debug/BearCamp.Tests.pdb
+app/BearCamp/_ReSharper.BearCamp/AspFileDataCache.dat
+app/BearCamp/BearCommon/obj/Debug/ResolveAssemblyReference.cache

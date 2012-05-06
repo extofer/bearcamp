@@ -13,7 +13,7 @@
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
     <fieldset>
-        <legend>Donor</legend>
+
 
         @Html.HiddenFor(model => model.DonorID)
 
@@ -95,7 +95,7 @@ Address
         </div>
 
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="Edit Donors" />
         </p>
     </fieldset>
 }

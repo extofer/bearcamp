@@ -10,22 +10,22 @@
 <body>
     <div class="page">
         <header>
-        <div id="title">
-            <ul id="menu">
-                <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                @if (HttpContext.Current.User.Identity.IsAuthenticated)
-                {
-                    <li>@Html.ActionLink("Donors", "Index", "Donors")</li> 
-                    <li>@Html.ActionLink("Manage Users", "Index", "User")</li> 
-                    <li>@Html.ActionLink("Manage Roles", "Index", "Permission")</li>  
-                }
-            </ul>
-          
-              
+            <div id="title">
+                <div id="logindisplay">
+                    @Html.Partial("_LogOnPartial")
+                </div>
+                <ul id="menu">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Donors", "Index", "Donors")</li> 
+                        <li>@Html.ActionLink("Manage Users", "Index", "User")</li> 
+                        <li>@Html.ActionLink("Manage Roles", "Index", "Permission")</li>  
+                        <li>@Html.ActionLink("Manage Donation Types", "Index", "DonationType")</li>
+                    }
+                </ul>
             </div>
-            <div id="logindisplay">
-                @Html.Partial("_LogOnPartial")
-            </div>
+            
             
         </header>
         <section id="main">

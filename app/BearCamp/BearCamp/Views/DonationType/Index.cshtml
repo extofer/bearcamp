@@ -1,0 +1,32 @@
+﻿@model IEnumerable<BearEF.DonationTypeID>
+
+@{
+    ViewBag.Title = "Index";
+}
+<table>
+    <tr>
+
+        <th>
+            Donation Type Description
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.DonationDesc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.DonationTypeID1 }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.DonationTypeID1  }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.DonationTypeID1 })
+        </td>
+    </tr>
+}
+
+</table>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>

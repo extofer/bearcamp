@@ -157,7 +157,7 @@ nav a:hover{
    Author:
    ========================================================================== */
 #title{ color: black;}
-.page{ background-color: #efefef;width: 800px;margin: 0 auto;padding: 20px;
+.page{ background-color: #efefef;width: 850px;margin: 0 auto;padding: 20px;
        -moz-border-radius: 15px;
 border-radius: 15px;margin-top: 10px;}
 #logindisplay{ float: right;}
@@ -175,6 +175,7 @@ float: left;
 
 #title  ul li a
 {
+    float: left;
 text-decoration: none;
 padding: .2em 1em;
 color: #fff;
@@ -203,6 +204,8 @@ background-color: #369;
 #donortable td {
     padding: 10px;
 }
+
+#menu{ float: right;width:850px}
 
 
 

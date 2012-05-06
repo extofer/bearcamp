@@ -66,7 +66,6 @@ namespace BearCamp.Models
         [Required]
         [Display(Name = "First name")]
         public string FastName { get; set; }
-
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
@@ -74,8 +73,13 @@ namespace BearCamp.Models
         public string Address2 { get; set; }
         public string City { get; set; }
         public string State { get; set; }
-        public string Zip { get; set; }
+        public string Zip { get; set; } 
+    }
 
-        
+    public class DonorTypeModel
+    {
+        [Required]
+        [Display(Name = "Donation Description")]
+        public string DonationDesc{ get; set; }
     }
 }

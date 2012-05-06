@@ -1,0 +1,18 @@
+﻿@model BearEF.DonationTypeID
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<fieldset>
+    <legend>DonationTypeID</legend>
+
+    <div class="display-label">Donation Type</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DonationDesc)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

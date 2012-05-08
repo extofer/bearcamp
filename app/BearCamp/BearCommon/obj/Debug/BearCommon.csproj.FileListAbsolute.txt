@@ -7,3 +7,12 @@ C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCommon\bin\Debug\BearEF.dll
 C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCommon\bin\Debug\EntityFramework.dll
 C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCommon\bin\Debug\BearEF.pdb
 C:\Users\Kelly\Desktop\Bear\app\BearCamp\BearCommon\bin\Debug\EntityFramework.xml
+C:\Users\Kelly\bearcamp\app\BearCamp\BearCommon\bin\Debug\BearCommon.dll
+C:\Users\Kelly\bearcamp\app\BearCamp\BearCommon\bin\Debug\BearCommon.pdb
+C:\Users\Kelly\bearcamp\app\BearCamp\BearCommon\bin\Debug\BearEF.dll
+C:\Users\Kelly\bearcamp\app\BearCamp\BearCommon\bin\Debug\EntityFramework.dll
+C:\Users\Kelly\bearcamp\app\BearCamp\BearCommon\bin\Debug\BearEF.pdb
+C:\Users\Kelly\bearcamp\app\BearCamp\BearCommon\bin\Debug\EntityFramework.xml
+C:\Users\Kelly\bearcamp\app\BearCamp\BearCommon\obj\Debug\BearCommon.csprojResolveAssemblyReference.cache
+C:\Users\Kelly\bearcamp\app\BearCamp\BearCommon\obj\Debug\BearCommon.dll
+C:\Users\Kelly\bearcamp\app\BearCamp\BearCommon\obj\Debug\BearCommon.pdb

@@ -27,3 +27,6 @@ obj/
 [Rr]elease*/
 _ReSharper*/
 [Tt]est[Rr]esult*
+app/BearCamp/BearCamp/bin/
+app/BearCamp/BearCamp/obj/
+app/BearCamp/BearCamp/web.object

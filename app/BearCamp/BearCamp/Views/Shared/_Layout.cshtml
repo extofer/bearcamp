@@ -5,30 +5,30 @@
     <title>@ViewBag.Title</title>
     <link href="@Url.Content("~/Content/styles.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css"/>
-    <script src="@Url.Content("~/Scripts/jquery-1.7.2.min.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/bootstrap.min.js")" type="text/javascript"></script>
     <script src="@Url.Content("~/Scripts/modernizr-2.5.3-respond-1.1.0.min.js")" type="text/javascript"></script>
 </head>
 <body>
     <div class="page">
         <header>
-            <div id="title">
-                <div id="logindisplay" class="btn">
-                    @Html.Partial("_LogOnPartial")
-                </div>
-                <ul id="menu" >
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    @if (HttpContext.Current.User.Identity.IsAuthenticated)
-                    {
-                        <li>@Html.ActionLink("Donors", "Index", "Donors")</li> 
-                        <li>@Html.ActionLink("Manage Users", "Index", "User")</li> 
-                        <li>@Html.ActionLink("Manage Roles", "Index", "Permission")</li>  
-                        <li>@Html.ActionLink("Manage Donation Types", "Index", "DonationType")</li>
-                    }
-                </ul>
+            <div id="logindisplay" class="btn">
+                      @Html.Partial("_LogOnPartial")
             </div>
-            
-            
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <ul class="nav">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                            {
+                                <li>@Html.ActionLink("Donors", "Index", "Donors")</li> 
+                                <li>@Html.ActionLink("Manage Users", "Index", "User")</li> 
+                                <li>@Html.ActionLink("Manage Roles", "Index", "Permission")</li>  
+                                <li>@Html.ActionLink("Manage Donation Types", "Index", "DonationType")</li>
+                            }
+                        </ul>
+                    </div>
+
+            </div>
         </header>
         <section id="main">
             @RenderBody()

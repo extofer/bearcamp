@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BearCommon
 {
-    public static class Linq2CSV
+    public static class Linq2Csv
     {
 
         public static string ToCsv<T>(this IEnumerable<T> items)

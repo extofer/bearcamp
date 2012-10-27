@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using BearEF;
+using BearCommon;
 
 namespace BearCamp.Controllers
 { 
@@ -39,7 +40,26 @@ namespace BearCamp.Controllers
             ViewBag.DonationType = new SelectList(db.DonationTypeIDs, "DonationTypeID1", "DonationDesc");
             ViewBag.DonorID = new SelectList(db.Donors, "DonorID", "FastName");
             return View();
-        } 
+        }
+
+
+        public ActionResult ExportDonations()
+        {
+            if (ModelState.IsValid)
+            {
+                var export = new DonationsExport();
+                //string sConn = ConfigurationManager.ConnectionStrings["export2csvConn"].ToString();
+
+                export.ExportCsv();
+
+
+                //db.Users.Add(user);
+                //db.SaveChanges();
+                //return RedirectToAction("Index");
+            }
+
+            return Redirect("/Donors"); //View(db.Users.ToList());
+        }
 
         //
         // POST: /Donation/Create

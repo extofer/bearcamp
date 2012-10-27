@@ -47,3 +47,12 @@ C:\Users\Kelly\Documents\Visual Studio 2010\Projects\BearCampClone\bearcamp\app\
 C:\Users\Kelly\Documents\Visual Studio 2010\Projects\BearCampClone\bearcamp\app\BearCamp\BearCamp\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Kelly\Documents\Visual Studio 2010\Projects\BearCampClone\bearcamp\app\BearCamp\BearCamp\obj\Debug\BearCamp.dll
 C:\Users\Kelly\Documents\Visual Studio 2010\Projects\BearCampClone\bearcamp\app\BearCamp\BearCamp\obj\Debug\BearCamp.pdb
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp\bin\BearCamp.dll
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp\bin\BearCamp.pdb
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp\bin\BearCommon.dll
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp\bin\BearEF.dll
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp\bin\BearCommon.pdb
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp\bin\BearEF.pdb
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp\obj\Debug\BearCamp.csprojResolveAssemblyReference.cache
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp\obj\Debug\BearCamp.dll
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp\obj\Debug\BearCamp.pdb

@@ -80,3 +80,19 @@ C:\Users\Kelly\Documents\Visual Studio 2010\Projects\BearCampClone\bearcamp\app\
 C:\Users\Kelly\Documents\Visual Studio 2010\Projects\BearCampClone\bearcamp\app\BearCamp\BearCamp.Tests\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Kelly\Documents\Visual Studio 2010\Projects\BearCampClone\bearcamp\app\BearCamp\BearCamp.Tests\obj\Debug\BearCamp.Tests.dll
 C:\Users\Kelly\Documents\Visual Studio 2010\Projects\BearCampClone\bearcamp\app\BearCamp\BearCamp.Tests\obj\Debug\BearCamp.Tests.pdb
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearCamp.Tests.dll.config
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearCamp.Tests.dll
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearCamp.Tests.pdb
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearCamp.dll
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\nunit.framework.dll
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\nunit.mocks.dll
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\pnunit.framework.dll
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearEF.dll
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearCommon.dll
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearCamp.pdb
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\nunit.framework.xml
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearEF.pdb
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp.Tests\bin\Debug\BearCommon.pdb
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp.Tests\obj\Debug\BearCamp.Tests.csprojResolveAssemblyReference.cache
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp.Tests\obj\Debug\BearCamp.Tests.dll
+C:\Users\gvilla\Documents\Dev-App\bearcamp\app\BearCamp\BearCamp.Tests\obj\Debug\BearCamp.Tests.pdb

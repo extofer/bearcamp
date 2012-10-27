@@ -4,21 +4,16 @@
     ViewBag.Title = "Bearcamp - Edit Donor";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 <h2>Edit Donor</h2>
-
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
 <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
     <fieldset>
-
-
         @Html.HiddenFor(model => model.DonorID)
 
         <div class="editor-label">
-            @*@Html.LabelFor(model => model.FastName)*@
             First Name
         </div>
 
@@ -28,7 +23,6 @@
         </div>
 
         <div class="editor-label">
-           @* @Html.LabelFor(model => model.LastName)*@
            Last Name
         </div>
         <div class="editor-field">
@@ -37,7 +31,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Email)
+           E-Mail
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Email)
@@ -45,7 +39,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Phone)
+           Phone
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Phone)
@@ -53,7 +47,7 @@
         </div>
 
         <div class="editor-label">
-@*            @Html.LabelFor(model => model.Address1)*@
+ 
 Address
         </div>
         <div class="editor-field">
@@ -62,7 +56,6 @@ Address
         </div>
 
         <div class="editor-label">
-         @*   @Html.LabelFor(model => model.Address2)*@
          Address Line 2
         </div>
         <div class="editor-field">
@@ -71,7 +64,7 @@ Address
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.City)
+           City
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.City)
@@ -79,7 +72,7 @@ Address
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.State)
+            State
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.State)
@@ -87,7 +80,7 @@ Address
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Zip)
+           Zip
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Zip)

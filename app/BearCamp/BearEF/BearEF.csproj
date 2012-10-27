@@ -95,6 +95,9 @@
     <Compile Include="Feature.cs">
       <DependentUpon>BearDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="FundraisingTask.cs">
+      <DependentUpon>BearDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Permission.cs">
       <DependentUpon>BearDataModel.tt</DependentUpon>
     </Compile>

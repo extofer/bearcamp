@@ -1,10 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="bearcampModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="bearcampModelStoreContainer">
+    <EntitySet Name="Campaigns" EntityType="bearcampModel.Store.Campaigns" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Donations" EntityType="bearcampModel.Store.Donations" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="DonationTypeID" EntityType="bearcampModel.Store.DonationTypeID" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Donor" EntityType="bearcampModel.Store.Donor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events" EntityType="bearcampModel.Store.Events" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Feature" EntityType="bearcampModel.Store.Feature" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FundraisingTasks" EntityType="bearcampModel.Store.FundraisingTasks" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Permission" EntityType="bearcampModel.Store.Permission" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Users" EntityType="bearcampModel.Store.Users" store:Type="Tables" Schema="dbo" />
     <AssociationSet Name="FK_Donations_DonationTypeID" Association="bearcampModel.Store.FK_Donations_DonationTypeID">
@@ -23,7 +26,24 @@
       <End Role="Users" EntitySet="Users" />
       <End Role="Permission" EntitySet="Permission" />
     </AssociationSet>
+    <AssociationSet Name="FundraisingTasks_FK00" Association="bearcampModel.Store.FundraisingTasks_FK00">
+      <End Role="Campaigns" EntitySet="Campaigns" />
+      <End Role="FundraisingTasks" EntitySet="FundraisingTasks" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Campaigns">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
+    <Property Name="Owner" Type="int" />
+    <Property Name="LaunchDate" Type="datetime" />
+    <Property Name="FundraiserDeadline" Type="datetime" />
+    <Property Name="FundraisingGoal" Type="money" />
+    <Property Name="Status" Type="nvarchar" MaxLength="255" />
+  </EntityType>
   <EntityType Name="Donations">
     <Key>
       <PropertyRef Name="DonationsID" />
@@ -57,12 +77,42 @@
     <Property Name="State" Type="char" MaxLength="2" />
     <Property Name="Zip" Type="char" MaxLength="7" />
   </EntityType>
+  <EntityType Name="Events">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" />
+    <Property Name="Related Campaign" Type="int" />
+    <Property Name="Owner" Type="int" />
+    <Property Name="Start Date" Type="datetime" />
+    <Property Name="End Date" Type="datetime" />
+    <Property Name="Status" Type="nvarchar" MaxLength="255" />
+    <Property Name="Fundraising Goal" Type="money" />
+  </EntityType>
   <EntityType Name="Feature">
     <Key>
       <PropertyRef Name="FeatureID" />
     </Key>
     <Property Name="FeatureID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="FeatureName" Type="nvarchar" MaxLength="52" />
+  </EntityType>
+  <EntityType Name="FundraisingTasks">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="nvarchar" MaxLength="255" />
+    <Property Name="Campaign" Type="int" />
+    <Property Name="Assigned To" Type="int" />
+    <Property Name="Priority" Type="nvarchar" MaxLength="255" />
+    <Property Name="Status" Type="nvarchar" MaxLength="255" />
+    <Property Name="PercentageComplete" Type="float" />
+    <Property Name="Description" Type="ntext" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="DueDate" Type="datetime" />
+    <Property Name="Attachments" Type="ntext" />
   </EntityType>
   <EntityType Name="Permission">
     <Key>
@@ -129,6 +179,20 @@
       </Principal>
       <Dependent Role="Permission">
         <PropertyRef Name="UserLogin" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FundraisingTasks_FK00">
+    <End Role="Campaigns" Type="bearcampModel.Store.Campaigns" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FundraisingTasks" Type="bearcampModel.Store.FundraisingTasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campaigns">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FundraisingTasks">
+        <PropertyRef Name="Campaign" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

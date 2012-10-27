@@ -23,6 +23,13 @@
       <End Role="Donor" EntitySet="Donors" />
       <End Role="Donation" EntitySet="Donations" />
     </AssociationSet>
+    <EntitySet Name="Campaigns" EntityType="bearcampModel.Campaign" />
+    <EntitySet Name="Events1" EntityType="bearcampModel.Events" />
+    <EntitySet Name="FundraisingTasks" EntityType="bearcampModel.FundraisingTask" />
+    <AssociationSet Name="FundraisingTasks_FK00" Association="bearcampModel.FundraisingTasks_FK00">
+      <End Role="Campaign" EntitySet="Campaigns" />
+      <End Role="FundraisingTask" EntitySet="FundraisingTasks" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Donor">
     <Key>
@@ -137,6 +144,63 @@
       </Principal>
       <Dependent Role="Donation">
         <PropertyRef Name="DonorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Campaign">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Owner" />
+    <Property Type="DateTime" Name="LaunchDate" />
+    <Property Type="DateTime" Name="FundraiserDeadline" />
+    <Property Type="Decimal" Name="FundraisingGoal" Precision="19" Scale="4" />
+    <Property Type="String" Name="Status" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="FundraisingTasks" Relationship="bearcampModel.FundraisingTasks_FK00" FromRole="Campaign" ToRole="FundraisingTask" />
+  </EntityType>
+  <EntityType Name="Events">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Related_Campaign" />
+    <Property Type="Int32" Name="Owner" />
+    <Property Type="DateTime" Name="Start_Date" />
+    <Property Type="DateTime" Name="End_Date" />
+    <Property Type="String" Name="Status" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="Fundraising_Goal" Precision="19" Scale="4" />
+  </EntityType>
+  <EntityType Name="FundraisingTask">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Title" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Campaign" />
+    <Property Type="Int32" Name="Assigned_To" />
+    <Property Type="String" Name="Priority" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="PercentageComplete" />
+    <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="StartDate" />
+    <Property Type="DateTime" Name="DueDate" />
+    <Property Type="String" Name="Attachments" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Campaign1" Relationship="bearcampModel.FundraisingTasks_FK00" FromRole="FundraisingTask" ToRole="Campaign" />
+  </EntityType>
+  <Association Name="FundraisingTasks_FK00">
+    <End Type="bearcampModel.Campaign" Role="Campaign" Multiplicity="0..1" />
+    <End Type="bearcampModel.FundraisingTask" Role="FundraisingTask" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Campaign">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FundraisingTask">
+        <PropertyRef Name="Campaign" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

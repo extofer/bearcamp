@@ -7,10 +7,20 @@ GO
 CREATE TABLE [dbo].[Donations](
 	[DonationsID] [int] IDENTITY(1,1) NOT NULL,
 	[DonorID] [int] NULL,
+	[Description] varchar (255),
+[Campaign] int,
+[Event] int, 
+[Owner] int, 
 	[DonationAmount] [money] NOT NULL,
+[Paid] bit, 
 	[DonataionDate] [date] NOT NULL,
+[PaymentDate] [date], 
 	[Comments] [nvarchar](343) NULL,
 	[DonationType] [int] NOT NULL,
+[ThanksSent] bit, 
+[ThanksDate] datetime, 
+[ThanksAmount] money
+
  CONSTRAINT [PK_Donations] PRIMARY KEY CLUSTERED 
 (
 	[DonationsID] ASC
@@ -18,19 +28,3 @@ CREATE TABLE [dbo].[Donations](
 ) ON [PRIMARY]
 
 GO
-
-ALTER TABLE [dbo].[Donations]  WITH CHECK ADD  CONSTRAINT [FK_Donations_DonationTypeID] FOREIGN KEY([DonationType])
-REFERENCES [dbo].[DonationTypeID] ([DonationTypeID])
-GO
-
-ALTER TABLE [dbo].[Donations] CHECK CONSTRAINT [FK_Donations_DonationTypeID]
-GO
-
-ALTER TABLE [dbo].[Donations]  WITH CHECK ADD  CONSTRAINT [FK_Donations_Donor] FOREIGN KEY([DonorID])
-REFERENCES [dbo].[Donor] ([DonorID])
-GO
-
-ALTER TABLE [dbo].[Donations] CHECK CONSTRAINT [FK_Donations_Donor]
-GO
-
-

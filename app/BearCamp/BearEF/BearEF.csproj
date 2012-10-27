@@ -101,6 +101,11 @@
     <Compile Include="FundraisingTask.cs">
       <DependentUpon>BearDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="BearDataGenerator.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BearDataGenerator.tt</DependentUpon>
+    </Compile>
     <Compile Include="Permission.cs">
       <DependentUpon>BearDataModel.tt</DependentUpon>
     </Compile>
@@ -124,6 +129,10 @@
     <None Include="BearDataModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>BearDataModel.cs</LastGenOutput>
+    </None>
+    <None Include="BearDataGenerator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>BearDataGenerator.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

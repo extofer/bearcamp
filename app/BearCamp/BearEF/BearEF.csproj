@@ -89,6 +89,9 @@
     <Compile Include="Donor.cs">
       <DependentUpon>BearDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>BearDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Events.cs">
       <DependentUpon>BearDataModel.tt</DependentUpon>
     </Compile>

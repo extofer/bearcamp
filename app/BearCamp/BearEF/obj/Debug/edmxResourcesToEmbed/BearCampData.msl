@@ -113,5 +113,29 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="bearcampModel.Employee">
+        <MappingFragment StoreEntitySet="Employees">
+          <ScalarProperty Name="Attachments" ColumnName="Attachments" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Web_Page" ColumnName="Web Page" />
+          <ScalarProperty Name="Country_Region" ColumnName="Country/Region" />
+          <ScalarProperty Name="ZIP_Postal_Code" ColumnName="ZIP/Postal Code" />
+          <ScalarProperty Name="State_Province" ColumnName="State/Province" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Fax_Number" ColumnName="Fax Number" />
+          <ScalarProperty Name="Mobile_Phone" ColumnName="Mobile Phone" />
+          <ScalarProperty Name="Home_Phone" ColumnName="Home Phone" />
+          <ScalarProperty Name="Business_Phone" ColumnName="Business Phone" />
+          <ScalarProperty Name="Job_Title" ColumnName="Job Title" />
+          <ScalarProperty Name="E_mail_Address" ColumnName="E-mail Address" />
+          <ScalarProperty Name="First_Name" ColumnName="First Name" />
+          <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

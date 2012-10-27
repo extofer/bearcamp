@@ -67,5 +67,34 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Campaigns">
+      <EntityTypeMapping TypeName="bearcampModel.Campaign">
+        <MappingFragment StoreEntitySet="Campaigns">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="FundraisingGoal" ColumnName="FundraisingGoal" />
+          <ScalarProperty Name="FundraiserDeadline" ColumnName="FundraiserDeadline" />
+          <ScalarProperty Name="LaunchDate" ColumnName="LaunchDate" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Events1">
+      <EntityTypeMapping TypeName="bearcampModel.Events">
+        <MappingFragment StoreEntitySet="Events">
+          <ScalarProperty Name="Fundraising_Goal" ColumnName="Fundraising Goal" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="End_Date" ColumnName="End Date" />
+          <ScalarProperty Name="Start_Date" ColumnName="Start Date" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="Related_Campaign" ColumnName="Related Campaign" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

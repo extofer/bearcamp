@@ -1,0 +1,50 @@
+﻿@model BearEF.Campaign
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Campaign</legend>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">Description</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">Owner</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Owner)
+    </div>
+
+    <div class="display-label">LaunchDate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LaunchDate)
+    </div>
+
+    <div class="display-label">FundraiserDeadline</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FundraiserDeadline)
+    </div>
+
+    <div class="display-label">FundraisingGoal</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FundraisingGoal)
+    </div>
+
+    <div class="display-label">Status</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Status)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

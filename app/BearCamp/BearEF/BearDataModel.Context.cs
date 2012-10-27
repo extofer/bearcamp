@@ -33,5 +33,6 @@ namespace BearEF
         public DbSet<DonationTypeID> DonationTypeIDs { get; set; }
         public DbSet<Campaign> Campaigns { get; set; }
         public DbSet<Events> Events1 { get; set; }
+        public DbSet<FundraisingTask> FundraisingTasks { get; set; }
     }
 }

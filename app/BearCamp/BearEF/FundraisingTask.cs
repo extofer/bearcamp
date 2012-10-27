@@ -12,23 +12,21 @@ using System.Collections.Generic;
 
 namespace BearEF
 {
-    public partial class Campaign
+    public partial class FundraisingTask
     {
-        public Campaign()
-        {
-            this.FundraisingTasks = new HashSet<FundraisingTask>();
-        }
-    
         public int ID { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public Nullable<int> Owner { get; set; }
-        public Nullable<System.DateTime> LaunchDate { get; set; }
-        public Nullable<System.DateTime> FundraiserDeadline { get; set; }
-        public Nullable<decimal> FundraisingGoal { get; set; }
+        public string Title { get; set; }
+        public Nullable<int> Campaign { get; set; }
+        public Nullable<int> Assigned_To { get; set; }
+        public string Priority { get; set; }
         public string Status { get; set; }
+        public Nullable<double> PercentageComplete { get; set; }
+        public string Description { get; set; }
+        public Nullable<System.DateTime> StartDate { get; set; }
+        public Nullable<System.DateTime> DueDate { get; set; }
+        public string Attachments { get; set; }
     
-        public virtual ICollection<FundraisingTask> FundraisingTasks { get; set; }
+        public virtual Campaign Campaign1 { get; set; }
     }
     
 }

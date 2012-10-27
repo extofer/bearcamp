@@ -161,7 +161,7 @@ nav a:hover{
        -moz-border-radius: 15px;
 border-radius: 15px;margin-top: 10px;}
 #logindisplay{ float: right;}
-#main{ clear: both;padding-left: 20px;border-top:2px solid #000000}
+#main{ clear: both;padding-left: 20px;}
 
 #title ul{
 margin: 0;

@@ -1,16 +1,32 @@
-﻿using System.Web;
+﻿using System.Linq;
+using System.Web;
 using BearEF;
-
+using BearCommon.Querries;
 
 namespace BearCommon
 {
     public class UserExport
     {
-        private readonly bearcampEntities _db = new bearcampEntities();
+        
 
         public void ExportCsv()
         {
-            var donors = _db.Donors;
+            bearcampEntities db = new bearcampEntities();
+            var donors = from n in db.Donors
+                         select new DonorModel
+                             {
+                                 DonorID = n.DonorID,
+                                 FirstName = n.FastName,
+                                 LastName = n.LastName,
+                                 Email = n.Email,
+                                 Phone = n.Phone,
+                                 Address1 = n.Address1,
+                                 Address2 = n.Address2,
+                                 City = n.City,
+                                 State = n.State,
+                                 Zip = n.Zip
+                             };
+
             var csv = donors.ToCsv();
 
             const string attachment = "attachment; filename=output.csv";

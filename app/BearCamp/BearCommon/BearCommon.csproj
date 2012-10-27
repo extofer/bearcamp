@@ -63,6 +63,7 @@
     <Compile Include="DonationsExport.cs" />
     <Compile Include="Linq2CSV.cs" />
     <Compile Include="Querries\DonationsModel.cs" />
+    <Compile Include="Querries\DonorModel.cs" />
     <Compile Include="UserExport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

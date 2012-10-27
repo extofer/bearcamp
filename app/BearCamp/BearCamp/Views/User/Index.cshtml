@@ -28,14 +28,13 @@
     </tr>
     <tr>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+
+            @Html.ActionLink("Edit", "Edit", new { id = item.UserLogin }, new { @class = "btn" })
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }, new { @class = "btn" })
+            @Html.ActionLink("Create New", "Create", null, new{@class="btn"})
         </td>
     </tr>
 }
 
 </table>
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+

@@ -1,0 +1,100 @@
+﻿@model BearEF.Employee
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Employee</legend>
+
+    <div class="display-label">Company</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Company)
+    </div>
+
+    <div class="display-label">Last_Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Last_Name)
+    </div>
+
+    <div class="display-label">First_Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.First_Name)
+    </div>
+
+    <div class="display-label">E_mail_Address</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.E_mail_Address)
+    </div>
+
+    <div class="display-label">Job_Title</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Job_Title)
+    </div>
+
+    <div class="display-label">Business_Phone</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Business_Phone)
+    </div>
+
+    <div class="display-label">Home_Phone</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Home_Phone)
+    </div>
+
+    <div class="display-label">Mobile_Phone</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Mobile_Phone)
+    </div>
+
+    <div class="display-label">Fax_Number</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Fax_Number)
+    </div>
+
+    <div class="display-label">Address</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
+
+    <div class="display-label">City</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.City)
+    </div>
+
+    <div class="display-label">State_Province</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.State_Province)
+    </div>
+
+    <div class="display-label">ZIP_Postal_Code</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ZIP_Postal_Code)
+    </div>
+
+    <div class="display-label">Country_Region</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Country_Region)
+    </div>
+
+    <div class="display-label">Web_Page</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Web_Page)
+    </div>
+
+    <div class="display-label">Notes</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Notes)
+    </div>
+
+    <div class="display-label">Attachments</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Attachments)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

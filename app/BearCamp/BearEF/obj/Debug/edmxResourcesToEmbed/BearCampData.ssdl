@@ -5,6 +5,28 @@
     <EntitySet Name="Donations" EntityType="bearcampModel.Store.Donations" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="DonationTypeID" EntityType="bearcampModel.Store.DonationTypeID" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Donor" EntityType="bearcampModel.Store.Donor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Employees" EntityType="bearcampModel.Store.Employees" store:Type="Tables" store:Schema="dbo" store:Name="Employees">
+      <DefiningQuery>SELECT 
+      [Employees].[ID] AS [ID], 
+      [Employees].[Company] AS [Company], 
+      [Employees].[Last Name] AS [Last Name], 
+      [Employees].[First Name] AS [First Name], 
+      [Employees].[E-mail Address] AS [E-mail Address], 
+      [Employees].[Job Title] AS [Job Title], 
+      [Employees].[Business Phone] AS [Business Phone], 
+      [Employees].[Home Phone] AS [Home Phone], 
+      [Employees].[Mobile Phone] AS [Mobile Phone], 
+      [Employees].[Fax Number] AS [Fax Number], 
+      [Employees].[Address] AS [Address], 
+      [Employees].[City] AS [City], 
+      [Employees].[State/Province] AS [State/Province], 
+      [Employees].[ZIP/Postal Code] AS [ZIP/Postal Code], 
+      [Employees].[Country/Region] AS [Country/Region], 
+      [Employees].[Web Page] AS [Web Page], 
+      [Employees].[Notes] AS [Notes], 
+      [Employees].[Attachments] AS [Attachments]
+      FROM [dbo].[Employees] AS [Employees]</DefiningQuery>
+    </EntitySet>
     <EntitySet Name="Events" EntityType="bearcampModel.Store.Events" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="Feature" EntityType="bearcampModel.Store.Feature" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="FundraisingTasks" EntityType="bearcampModel.Store.FundraisingTasks" store:Type="Tables" Schema="dbo" />
@@ -76,6 +98,32 @@
     <Property Name="City" Type="nvarchar" MaxLength="52" />
     <Property Name="State" Type="char" MaxLength="2" />
     <Property Name="Zip" Type="char" MaxLength="7" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'db2b81afbc1c4b42d2ac16a0480132ad3c.dbo.Employees' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="Employees">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Company" Type="nvarchar" MaxLength="255" />
+    <Property Name="Last Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="First Name" Type="nvarchar" MaxLength="255" />
+    <Property Name="E-mail Address" Type="nvarchar" MaxLength="255" />
+    <Property Name="Job Title" Type="nvarchar" MaxLength="255" />
+    <Property Name="Business Phone" Type="nvarchar" MaxLength="255" />
+    <Property Name="Home Phone" Type="nvarchar" MaxLength="255" />
+    <Property Name="Mobile Phone" Type="nvarchar" MaxLength="255" />
+    <Property Name="Fax Number" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="City" Type="nvarchar" MaxLength="255" />
+    <Property Name="State/Province" Type="nvarchar" MaxLength="255" />
+    <Property Name="ZIP/Postal Code" Type="nvarchar" MaxLength="255" />
+    <Property Name="Country/Region" Type="nvarchar" MaxLength="255" />
+    <Property Name="Web Page" Type="ntext" />
+    <Property Name="Notes" Type="ntext" />
+    <Property Name="Attachments" Type="ntext" />
   </EntityType>
   <EntityType Name="Events">
     <Key>

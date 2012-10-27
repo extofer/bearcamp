@@ -34,5 +34,6 @@ namespace BearEF
         public DbSet<Campaign> Campaigns { get; set; }
         public DbSet<Events> Events1 { get; set; }
         public DbSet<FundraisingTask> FundraisingTasks { get; set; }
+        public DbSet<Employee> Employees { get; set; }
     }
 }

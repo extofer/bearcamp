@@ -30,6 +30,7 @@
       <End Role="Campaign" EntitySet="Campaigns" />
       <End Role="FundraisingTask" EntitySet="FundraisingTasks" />
     </AssociationSet>
+    <EntitySet Name="Employees" EntityType="bearcampModel.Employee" />
   </EntityContainer>
   <EntityType Name="Donor">
     <Key>
@@ -204,4 +205,27 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Company" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Last_Name" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="First_Name" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="E_mail_Address" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Job_Title" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Business_Phone" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Home_Phone" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Mobile_Phone" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Fax_Number" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Address" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="City" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="State_Province" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ZIP_Postal_Code" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Country_Region" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Web_Page" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Attachments" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

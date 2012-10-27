@@ -1,0 +1,129 @@
+﻿@model IEnumerable<BearEF.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            Company
+        </th>
+        <th>
+            Last_Name
+        </th>
+        <th>
+            First_Name
+        </th>
+        <th>
+            E_mail_Address
+        </th>
+        <th>
+            Job_Title
+        </th>
+        <th>
+            Business_Phone
+        </th>
+        <th>
+            Home_Phone
+        </th>
+        <th>
+            Mobile_Phone
+        </th>
+        <th>
+            Fax_Number
+        </th>
+        <th>
+            Address
+        </th>
+        <th>
+            City
+        </th>
+        <th>
+            State_Province
+        </th>
+        <th>
+            ZIP_Postal_Code
+        </th>
+        <th>
+            Country_Region
+        </th>
+        <th>
+            Web_Page
+        </th>
+        <th>
+            Notes
+        </th>
+        <th>
+            Attachments
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Company)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Last_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.First_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.E_mail_Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Job_Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Business_Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Home_Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile_Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fax_Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.State_Province)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ZIP_Postal_Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Country_Region)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Web_Page)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Attachments)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

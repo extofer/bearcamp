@@ -12,11 +12,12 @@
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
+
     <fieldset>
         <legend>User</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.UserLogin)
+            @Html.LabelFor(model => model.UserLogin, "User Login")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.UserLogin)
@@ -24,7 +25,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Pswd)
+            @Html.LabelFor(model => model.Pswd, "Password")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Pswd)
@@ -32,7 +33,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.FirstName)
+            @Html.LabelFor(model => model.FirstName, "First Name")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.FirstName)
@@ -40,7 +41,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.LastName)
+            @Html.LabelFor(model => model.LastName, "Last Name")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.LastName)
@@ -48,7 +49,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Email)
+            @Html.LabelFor(model => model.Email, "E-Mail")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Email)
@@ -56,7 +57,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Phone)
+            @Html.LabelFor(model => model.Phone, "Phone")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Phone)

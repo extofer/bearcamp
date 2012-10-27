@@ -10,6 +10,28 @@
           <EntitySet Name="Donations" EntityType="bearcampModel.Store.Donations" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="DonationTypeID" EntityType="bearcampModel.Store.DonationTypeID" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Donor" EntityType="bearcampModel.Store.Donor" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Employees" EntityType="bearcampModel.Store.Employees" store:Type="Tables" store:Schema="dbo" store:Name="Employees">
+            <DefiningQuery>SELECT 
+      [Employees].[ID] AS [ID], 
+      [Employees].[Company] AS [Company], 
+      [Employees].[Last Name] AS [Last Name], 
+      [Employees].[First Name] AS [First Name], 
+      [Employees].[E-mail Address] AS [E-mail Address], 
+      [Employees].[Job Title] AS [Job Title], 
+      [Employees].[Business Phone] AS [Business Phone], 
+      [Employees].[Home Phone] AS [Home Phone], 
+      [Employees].[Mobile Phone] AS [Mobile Phone], 
+      [Employees].[Fax Number] AS [Fax Number], 
+      [Employees].[Address] AS [Address], 
+      [Employees].[City] AS [City], 
+      [Employees].[State/Province] AS [State/Province], 
+      [Employees].[ZIP/Postal Code] AS [ZIP/Postal Code], 
+      [Employees].[Country/Region] AS [Country/Region], 
+      [Employees].[Web Page] AS [Web Page], 
+      [Employees].[Notes] AS [Notes], 
+      [Employees].[Attachments] AS [Attachments]
+      FROM [dbo].[Employees] AS [Employees]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="Events" EntityType="bearcampModel.Store.Events" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Feature" EntityType="bearcampModel.Store.Feature" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="FundraisingTasks" EntityType="bearcampModel.Store.FundraisingTasks" store:Type="Tables" Schema="dbo" />
@@ -81,6 +103,32 @@
           <Property Name="City" Type="nvarchar" MaxLength="52" />
           <Property Name="State" Type="char" MaxLength="2" />
           <Property Name="Zip" Type="char" MaxLength="7" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'db2b81afbc1c4b42d2ac16a0480132ad3c.dbo.Employees' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Company" Type="nvarchar" MaxLength="255" />
+          <Property Name="Last Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="First Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="E-mail Address" Type="nvarchar" MaxLength="255" />
+          <Property Name="Job Title" Type="nvarchar" MaxLength="255" />
+          <Property Name="Business Phone" Type="nvarchar" MaxLength="255" />
+          <Property Name="Home Phone" Type="nvarchar" MaxLength="255" />
+          <Property Name="Mobile Phone" Type="nvarchar" MaxLength="255" />
+          <Property Name="Fax Number" Type="nvarchar" MaxLength="255" />
+          <Property Name="Address" Type="nvarchar" MaxLength="50" />
+          <Property Name="City" Type="nvarchar" MaxLength="255" />
+          <Property Name="State/Province" Type="nvarchar" MaxLength="255" />
+          <Property Name="ZIP/Postal Code" Type="nvarchar" MaxLength="255" />
+          <Property Name="Country/Region" Type="nvarchar" MaxLength="255" />
+          <Property Name="Web Page" Type="ntext" />
+          <Property Name="Notes" Type="ntext" />
+          <Property Name="Attachments" Type="ntext" />
         </EntityType>
         <EntityType Name="Events">
           <Key>
@@ -235,6 +283,7 @@
             <End Role="Campaign" EntitySet="Campaigns" />
             <End Role="FundraisingTask" EntitySet="FundraisingTasks" />
           </AssociationSet>
+          <EntitySet Name="Employees" EntityType="bearcampModel.Employee" />
           </EntityContainer>
         <EntityType Name="Donor">
           <Key>
@@ -409,6 +458,29 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="Employee">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Company" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Last_Name" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="First_Name" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="E_mail_Address" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Job_Title" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Business_Phone" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Home_Phone" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Mobile_Phone" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Fax_Number" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="City" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="State_Province" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ZIP_Postal_Code" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Country_Region" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Web_Page" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Notes" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Attachments" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -511,6 +583,30 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="bearcampModel.Employee">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="Attachments" ColumnName="Attachments" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Web_Page" ColumnName="Web Page" />
+                <ScalarProperty Name="Country_Region" ColumnName="Country/Region" />
+                <ScalarProperty Name="ZIP_Postal_Code" ColumnName="ZIP/Postal Code" />
+                <ScalarProperty Name="State_Province" ColumnName="State/Province" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Fax_Number" ColumnName="Fax Number" />
+                <ScalarProperty Name="Mobile_Phone" ColumnName="Mobile Phone" />
+                <ScalarProperty Name="Home_Phone" ColumnName="Home Phone" />
+                <ScalarProperty Name="Business_Phone" ColumnName="Business Phone" />
+                <ScalarProperty Name="Job_Title" ColumnName="Job Title" />
+                <ScalarProperty Name="E_mail_Address" ColumnName="E-mail Address" />
+                <ScalarProperty Name="First_Name" ColumnName="First Name" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last Name" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -551,9 +647,10 @@
         <EntityTypeShape EntityType="bearcampModel.Donation" Width="1.5" PointX="5" PointY="5" Height="2.5571907552083317" />
         <EntityTypeShape EntityType="bearcampModel.DonationTypeID" Width="1.5" PointX="2.75" PointY="9.5" Height="1.5956835937499996" />
         <AssociationConnector Association="bearcampModel.FK_Donations_DonationTypeID" >
-          <ConnectorPoint PointX="4.25" PointY="10.297841796875" />
-          <ConnectorPoint PointX="5.75" PointY="10.297841796875" />
-          <ConnectorPoint PointX="5.75" PointY="7.5571907552083317" />
+          <ConnectorPoint PointX="4.25" PointY="9.5011528461538468" />
+          <ConnectorPoint PointX="4.625" PointY="9.1261528461538468" />
+          <ConnectorPoint PointX="4.625" PointY="6.9491450664062491" />
+          <ConnectorPoint PointX="5" PointY="6.9491450664062491" />
         </AssociationConnector>
         <AssociationConnector Association="bearcampModel.FK_Donations_Donor" >
           <ConnectorPoint PointX="4.25" PointY="6.2785953776041659" />
@@ -567,6 +664,7 @@
           <ConnectorPoint PointX="6.71875" PointY="4.71875" />
           <ConnectorPoint PointX="8.25" PointY="4.71875" />
         </AssociationConnector>
+        <EntityTypeShape EntityType="bearcampModel.Employee" Width="1.5" PointX="5.375" PointY="8.75" Height="4.4802050781250031" />
         </Diagram>
     </Diagrams>
   </Designer>

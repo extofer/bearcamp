@@ -21,8 +21,7 @@
                 <strong>City/State/Zip:</strong> @Html.DisplayFor(modelItem => item.City) @Html.DisplayFor(modelItem => item.State)
                 @Html.DisplayFor(modelItem => item.Zip)<br/><br/>
                 <a href="@Url.Action("Edit", "Donors", new { id = item.DonorID })" title="Edit Donor">
-                    <img src="../../Content/images/application_edit.png" /></a> | <a href="@Url.Action("Details", "Donors", new { id = item.DonorID })" title="View Donor">
-                        <img src="../../Content/images/magnifier.png" /></a> | <a href="@Url.Action("Delete", "Donors", new { id = item.DonorID })" title="Delete Donor">
+                    <img src="../../Content/images/application_edit.png" /></a> | <a href="@Url.Action("Delete", "Donors", new { id = item.DonorID })" title="Delete Donor">
                             <img src="../../Content/images/delete.png" /></a>
             </td>
         </tr>

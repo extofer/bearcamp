@@ -320,6 +320,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
+      <UserProperties BuildVersion_UseGlobalSettings="True" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>

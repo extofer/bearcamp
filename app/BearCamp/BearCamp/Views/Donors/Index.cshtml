@@ -4,31 +4,22 @@
     ViewBag.Title = "Bearcamp - Donor List";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<script type="text/javascript">
-    $(document).ready(function() {
 
-        $('#donortable tr:even').css("background-color", "#A5BFDD");
-    });
-</script>
-<h2>
-    Donor List</h2>
-    <p>
-    @Html.ActionLink("Create New", "Create") | @Html.ActionLink("Export List", "ExportUsers")
-</p>
-<table id="donortable">
+<h2>Donor List</h2>
 
+<table class="table table-bordered">
     @foreach (Donor item in Model)
     {
         <tr>
             <td>
-                <strong>Name:</strong> @Html.DisplayFor(modelItem => item.LastName), @Html.DisplayFor(modelItem => item.FastName)<br /><br />
-                <strong>E-Mail:</strong> @Html.DisplayFor(modelItem => item.Email)<br /><br />
+                <strong>Name:</strong> @Html.DisplayFor(modelItem => item.LastName), @Html.DisplayFor(modelItem => item.FastName)<br />
+                <strong>E-Mail:</strong> @Html.DisplayFor(modelItem => item.Email)<br />
                 <strong>Phone:</strong> @Html.DisplayFor(modelItem => item.Phone)
-                <br /><br />
-                <strong>Address1:</strong> @Html.DisplayFor(modelItem => item.Address1)<br /><br />
-                <strong>Address2:</strong> @Html.DisplayFor(modelItem => item.Address2)<br /><br />
+                <br />
+                <strong>Address1:</strong> @Html.DisplayFor(modelItem => item.Address1)<br />
+                <strong>Address2:</strong> @Html.DisplayFor(modelItem => item.Address2)<br />
                 <strong>City/State/Zip:</strong> @Html.DisplayFor(modelItem => item.City) @Html.DisplayFor(modelItem => item.State)
-                @Html.DisplayFor(modelItem => item.Zip)<br/><br />
+                @Html.DisplayFor(modelItem => item.Zip)<br/><br/>.
                 <a href="@Url.Action("Edit", "Donors", new { id = item.DonorID })" title="Edit Donor">
                     <img src="../../Content/images/application_edit.png" /></a> | <a href="@Url.Action("Details", "Donors", new { id = item.DonorID })" title="View Donor">
                         <img src="../../Content/images/magnifier.png" /></a> | <a href="@Url.Action("Delete", "Donors", new { id = item.DonorID })" title="Delete Donor">
@@ -37,6 +28,6 @@
         </tr>
     }
 </table>
-<p>
-    @Html.ActionLink("Create New", "Create") | @Html.ActionLink("Export List", "ExportUsers")
+    <p>
+    @Html.ActionLink("Create New", "Create", null, new {@class="btn"}) &nbsp; @Html.ActionLink("Export List", "ExportUsers", null, new{@class="btn"})
 </p>

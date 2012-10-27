@@ -4,9 +4,9 @@
     Please enter your user name and password. @Html.ActionLink("Register", "Register") if you don't have an account.
 </p>*@
 
-<div class="alert alert-error">
+
 @Html.ValidationSummary(true, "Login was unsuccessful. Please correct the errors and try again.")
-</div>
+
 @using (Html.BeginForm()) {
     <div>
         <fieldset>

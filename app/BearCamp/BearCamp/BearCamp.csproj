@@ -82,12 +82,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\bearsmall.png" />
+    <Content Include="Content\images\otis_redding.png" />
     <Content Include="favicon.ico" />
     <Content Include="Content\bootstrap-responsive.css" />
     <Content Include="Content\bootstrap-responsive.min.css" />
     <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <None Include="Content\bootstrap.min.css1" />
     <Content Include="Content\images\add.png" />
     <Content Include="Content\images\apple-touch-icon-114x114-precomposed.png" />
     <Content Include="Content\images\apple-touch-icon-57x57-precomposed.png" />

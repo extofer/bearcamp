@@ -124,7 +124,7 @@ namespace BearEF
 			[StringLength(2, ErrorMessage = "Please specify a state abbreviation")]
     		public String State { get; set; }
 
-			[StringLength(7, ErrorMessage = "Please enter a 7 digit zip code")]
+			[StringLength(7, ErrorMessage = "Please enter a 7-digit zip code")]
     		public String Zip { get; set; }
 
     		public EntityCollection<Donation> Donations { get; set; }

@@ -40,7 +40,7 @@ namespace BearCamp.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.DonationType = new SelectList(db.DonationTypeIDs, "DonationTypeID1", "DonationDesc");
+            //ViewBag.DonationType = new SelectList(db.DonationTypeIDs, "DonationTypeID1", "DonationDesc");
             ViewBag.DonorID = new SelectList(db.Donors, "DonorID", "FastName");
             return View();
         }
@@ -77,7 +77,7 @@ namespace BearCamp.Controllers
                 return RedirectToAction("Index");  
             }
 
-            ViewBag.DonationType = new SelectList(db.DonationTypeIDs, "DonationTypeID1", "DonationDesc", donation.DonationType);
+            //ViewBag.DonationType = new SelectList(db.DonationTypeIDs, "DonationTypeID1", "DonationDesc", donation.DonationType);
             ViewBag.DonorID = new SelectList(db.Donors, "DonorID", "FastName", donation.DonorID);
             return View(donation);
         }
@@ -88,7 +88,7 @@ namespace BearCamp.Controllers
         public ActionResult Edit(int id)
         {
             Donation donation = db.Donations.Find(id);
-            ViewBag.DonationType = new SelectList(db.DonationTypeIDs, "DonationTypeID1", "DonationDesc", donation.DonationType);
+            //ViewBag.DonationType = new SelectList(db.DonationTypeIDs, "DonationTypeID1", "DonationDesc", donation.DonationType);
             ViewBag.DonorID = new SelectList(db.Donors, "DonorID", "FastName", donation.DonorID);
             return View(donation);
         }
@@ -105,7 +105,7 @@ namespace BearCamp.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.DonationType = new SelectList(db.DonationTypeIDs, "DonationTypeID1", "DonationDesc", donation.DonationType);
+            //ViewBag.DonationType = new SelectList(db.DonationTypeIDs, "DonationTypeID1", "DonationDesc", donation.DonationType);
             ViewBag.DonorID = new SelectList(db.Donors, "DonorID", "FastName", donation.DonorID);
             return View(donation);
         }

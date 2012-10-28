@@ -22,17 +22,37 @@
                         <li>@Html.ActionLink("Home", "Index", "Home")</li>
                         @if (HttpContext.Current.User.Identity.IsAuthenticated)
                         {
-                            <li>@Html.ActionLink("Donors", "Index", "Donors")</li> 
-                            <li>@Html.ActionLink("Manage Users", "Index", "User")</li> 
-                            <li>@Html.ActionLink("Manage Roles", "Index", "Permission")</li>  
-                            <li>@Html.ActionLink("Manage Donation Types", "Index", "DonationType")</li>
-                                
-                            <li>@Html.ActionLink("Manage Donations", "Index", "Donation")</li>
-                                
+                            <li class="dropdown">
+                                <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Donors <b class="caret"></b></a>
+                                 <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                                     <li>@Html.ActionLink("Donor List", "Index", "Donors")</li>
+                                     <li>@Html.ActionLink("Add Donor", "Create", "Donors")</li>
+                                </ul>
+                            </li> 
+                            <li class="dropdown">
+                                <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Users <b class="caret"></b></a>
+                                 <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                                     <li>@Html.ActionLink("Users List", "Index", "User")</li>
+                                     <li>@Html.ActionLink("Add Users", "Create", "User")</li>
+                                     <li>@Html.ActionLink("Manage Roles", "Index", "Permission")</li>
+                                </ul>
+                            </li> 
+                            <li class="dropdown">
+                                <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Donations <b class="caret"></b></a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                                    <li>@Html.ActionLink("Add Donation", "Create", "Donation")</li>
+                                    <li>@Html.ActionLink("Donation List", "Index", "Donation")</li>
+                                    <li>@Html.ActionLink("Add Donation Type", "Create", "DonationType")</li>
+                                    <li>@Html.ActionLink("Donation Type List", "Index", "DonationType")</li>
+
+                                </ul>
+                            </li>
+                          
                         }
                     </ul>
                 </div>
             </div>
+ 
         </header>
         <section id="main">
             @RenderBody()

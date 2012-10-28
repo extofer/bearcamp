@@ -13,7 +13,7 @@ namespace BearCommon.Querries
         public decimal DonationAmount { get; set; }
         public DateTime DonationsDate { get; set; }
         public string Comments { get; set; }
-        public DonationTypeID DonationType { get; set; }
+        //public DonationTypeID DonationType { get; set; }
 
     }
 }

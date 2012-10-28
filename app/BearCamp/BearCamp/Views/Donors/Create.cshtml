@@ -12,7 +12,6 @@
     @Html.ValidationSummary(true)
     <fieldset>
         <legend><h2>Add Donor</h2></legend>
-        <br/>
         First Name:
         <div class="editor-field">
             @Html.EditorFor(model => model.FastName)
@@ -68,11 +67,7 @@
         </div><br/>
 
         <p>
-            <input type="submit" value="Add" />
+            <input type="submit" value="Add" class="btn btn-info"/>  @Html.ActionLink("Back to List", "Index", null, new {@class="btn"})
         </p>
     </fieldset>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>

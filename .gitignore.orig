@@ -98,6 +98,7 @@ publish
 
 # Others
 [Bb]in
+<<<<<<< HEAD
 [Oo]bj
 sql
 TestResults
@@ -163,3 +164,16 @@ pip-log.txt
 .DS_Store
 
 app/BearCamp/BearCamp/web.config
+
+=======
+[Dd]ebug*/
+*.lib
+*.sbr
+obj/
+[Rr]elease*/
+_ReSharper*/
+[Tt]est[Rr]esult*
+app/BearCamp/BearCamp/bin/
+app/BearCamp/BearCamp/obj/
+app/BearCamp/BearCamp/Web.config
+>>>>>>> master

@@ -30,3 +30,5 @@ _ReSharper*/
 app/BearCamp/BearCamp/bin/
 app/BearCamp/BearCamp/obj/
 app/BearCamp/BearCamp/Web.config
+app/BearCamp/BearCamp/Web.Debug.config
+app/BearCamp/BearCamp/Web.Release.config

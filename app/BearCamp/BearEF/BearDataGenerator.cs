@@ -127,6 +127,7 @@ namespace BearEF
 			[StringLength(7, ErrorMessage = "Please enter a 7-digit zip code")]
     		public String Zip { get; set; }
 
+
     		public EntityCollection<Donation> Donations { get; set; }
 
 		}

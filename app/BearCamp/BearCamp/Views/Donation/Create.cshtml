@@ -5,34 +5,24 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
-
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
 <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
 
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
     <fieldset>
-        <legend>Donation</legend>
-
-        @*<div class="editor-label">
-            @Html.LabelFor(model => model.DonationsID)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.DonationsID)
-            @Html.ValidationMessageFor(model => model.DonationsID)
-        </div>*@
+        <legend>Add Donation</legend>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.DonorID, "Donor")
         </div>
         <div class="editor-field">
-            @Html.DropDownList("DonorID", String.Empty)
+            @Html.DropDownList("DonorID", "Select Donor")
             @Html.ValidationMessageFor(model => model.DonorID)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.DonationAmount)
+            @Html.LabelFor(model => model.DonationAmount, "Donation Amount")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.DonationAmount)
@@ -40,7 +30,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.DonataionDate)
+            @Html.LabelFor(model => model.DonataionDate, "Donation Date")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.DonataionDate)
@@ -48,7 +38,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Comments)
+            @Html.LabelFor(model => model.Comments, "Comments")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Comments)
@@ -56,19 +46,16 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.DonationType, "DonationTypeID")
+            @Html.LabelFor(model => model.DonationType, "Donation Type")
         </div>
         <div class="editor-field">
-            @Html.DropDownList("DonationType", String.Empty)
+            @Html.DropDownList("DonationType", "Select Donation Type")
             @Html.ValidationMessageFor(model => model.DonationType)
         </div>
 
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="Create" class="btn btn-info">  @Html.ActionLink("Back to List", "Index", null, new{@class="btn"})
         </p>
     </fieldset>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>

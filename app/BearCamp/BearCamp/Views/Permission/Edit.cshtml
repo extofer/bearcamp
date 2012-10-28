@@ -5,7 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
 
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
 <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
@@ -13,28 +12,25 @@
 @using (Html.BeginForm()) {
     @Html.ValidationSummary(true)
     <fieldset>
-        <legend>Permission</legend>
+        <legend>Edit Permission</legend>
 
         @Html.HiddenFor(model => model.PermissionID)
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.UserLogin, "User")
-        </div>
-        <div class="editor-field">
-            @Html.DropDownList("UserLogin", String.Empty)
-            @Html.ValidationMessageFor(model => model.UserLogin)
-        </div>
+        <span class="editor-label">
+           Editing permissions for:  
+        </span>
+@Html.DisplayTextFor(model=>model.UserLogin)
 
         <div class="editor-label">
             @Html.LabelFor(model => model.FeatureID, "Feature")
         </div>
         <div class="editor-field">
-            @Html.DropDownList("FeatureID", String.Empty)
+            @Html.DropDownList("FeatureID")
             @Html.ValidationMessageFor(model => model.FeatureID)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.PermissionSort)
+            @Html.LabelFor(model => model.PermissionSort, "Permission Sort")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.PermissionSort)
@@ -42,11 +38,7 @@
         </div>
 
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="Save" class="btn btn-info"/> @Html.ActionLink("Back to List", "Index", null, new {@class="btn"})
         </p>
     </fieldset>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>

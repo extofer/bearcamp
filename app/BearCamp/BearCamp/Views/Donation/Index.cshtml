@@ -5,27 +5,24 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Donations</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table>
+<table class="table">
     <tr>
         <th>
             Donor
         </th>
         <th>
-            DonationAmount
+            Amount
         </th>
         <th>
-            DonataionDate
+            Donation Date
         </th>
         <th>
             Comments
         </th>
         <th>
-            DonationTypeID
+            Donation Type
         </th>
         <th></th>
     </tr>
@@ -48,9 +45,8 @@
             @Html.DisplayFor(modelItem => item.DonationTypeID.DonationDesc)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            @Html.ActionLink("Edit", "Edit", new {  id=item.DonationsID  }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DonationsID })
         </td>
     </tr>
 }
@@ -58,5 +54,5 @@
 </table>
 
 <p>
-    @Html.ActionLink("Create New", "Create", null, new {@class="btn"}) &nbsp; @Html.ActionLink("Export List", "ExportDonations", null, new { @class = "btn" })
+    @Html.ActionLink("Create New", "Create", null, new {@class="btn btn-info"}) &nbsp; @Html.ActionLink("Export List", "ExportDonations", null, new { @class = "btn" })
 </p>

@@ -3,7 +3,7 @@
 @{
     ViewBag.Title = "Index";
 }
-<table>
+<table class="table">
     <tr>
 
         <th>
@@ -20,7 +20,6 @@
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id = item.DonationTypeID1 }) |
-            @Html.ActionLink("Details", "Details", new {  id=item.DonationTypeID1  }) |
             @Html.ActionLink("Delete", "Delete", new {  id=item.DonationTypeID1 })
         </td>
     </tr>
@@ -28,5 +27,5 @@
 
 </table>
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "Create", null, new{@class="btn btn-info"})
 </p>

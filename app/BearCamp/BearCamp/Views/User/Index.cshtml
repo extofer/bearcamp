@@ -13,7 +13,7 @@
 <h2>Users</h2>
 
 
-<table id="usertable" style="width:100%;">
+<table style="width:100%;" class="table">
 
 @foreach (var item in Model) {
     <tr>
@@ -28,10 +28,10 @@
     </tr>
     <tr>
         <td>
-
+            @Html.ActionLink("Create New", "Create", null, new{@class="btn btn-info"})
             @Html.ActionLink("Edit", "Edit", new { id = item.UserLogin }, new { @class = "btn" })
             @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }, new { @class = "btn" })
-            @Html.ActionLink("Create New", "Create", null, new{@class="btn"})
+            
         </td>
     </tr>
 }

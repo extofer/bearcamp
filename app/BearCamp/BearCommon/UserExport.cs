@@ -16,10 +16,12 @@ namespace BearCommon
                          select new DonorModel
                              {
                                  DonorID = n.DonorID,
-                                 FirstName = n.FastName,
+                                 FirstName = n.FirstName,
                                  LastName = n.LastName,
                                  Email = n.Email,
-                                 Phone = n.Phone,
+                                 HomePhone = n.HomePhone,
+                                 BusinessPhone = n.Business_Phone,
+                                 MobilePhone = n.Mobile_Phone,
                                  Address1 = n.Address1,
                                  Address2 = n.Address2,
                                  City = n.City,

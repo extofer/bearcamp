@@ -15,24 +15,21 @@ namespace BearEF
     public partial class Donation
     {
         public int DonationsID { get; set; }
-        public int DonorID { get; set; }
-        public decimal DonationAmount { get; set; }
-        public System.DateTime DonataionDate { get; set; }
-        public string Comments { get; set; }
-        public int DonationType { get; set; }
+        public Nullable<int> DonorID { get; set; }
         public string Description { get; set; }
         public Nullable<int> Campaign { get; set; }
         public Nullable<int> Event { get; set; }
         public Nullable<int> Owner { get; set; }
+        public decimal DonationAmount { get; set; }
         public Nullable<bool> Paid { get; set; }
         public System.DateTime DonationDate { get; set; }
         public Nullable<System.DateTime> PaymentDate { get; set; }
+        public string Comments { get; set; }
+        public int DonationType { get; set; }
         public Nullable<bool> ThanksSent { get; set; }
         public Nullable<System.DateTime> ThanksDate { get; set; }
         public Nullable<decimal> ThanksAmount { get; set; }
         public string PaymentMethod { get; set; }
-    
-        public virtual Donor Donor { get; set; }
     }
     
 }

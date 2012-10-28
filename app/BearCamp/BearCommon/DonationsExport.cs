@@ -17,13 +17,12 @@ namespace BearCommon
                             select new DonationsModel
                                 {
                                     DonationsID = n.DonationsID,
-                                   DonorID = n.DonorID,
-                                   DonationAmount = n.DonationAmount,
-                                   DonationsDate = n.DonataionDate,
-                                   Comments = n.Comments
-                                  };
+                                    DonorID = n.DonorID,
+                                    DonationAmount = n.DonationAmount,
+                                    DonationsDate = n.DonationDate,
+                                    Comments = n.Comments
+                                };
             
-
             var csv = donations.ToCsv();
 
             const string attachment = "attachment; filename=output.csv";
@@ -35,8 +34,6 @@ namespace BearCommon
             HttpContext.Current.Response.AddHeader("Pragma", "public");
             HttpContext.Current.Response.Write(csv);
             HttpContext.Current.Response.End();
-
         }
-
     }
 }

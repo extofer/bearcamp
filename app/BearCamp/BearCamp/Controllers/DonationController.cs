@@ -9,7 +9,7 @@ using BearEF;
 using BearCommon;
 
 namespace BearCamp.Controllers
-{ 
+{
     public class DonationController : Controller
     {
         private bearcampEntities db = new bearcampEntities();
@@ -19,11 +19,7 @@ namespace BearCamp.Controllers
 
         public ViewResult Index()
         {
-            if (db.Donations != null)
-            {
-                return View(db.Donations.ToList());
-
-            }
+            return View(db.Donations.ToList());
         }
 
         //
@@ -74,17 +70,17 @@ namespace BearCamp.Controllers
             {
                 db.Donations.Add(donation);
                 db.SaveChanges();
-                return RedirectToAction("Index");  
+                return RedirectToAction("Index");
             }
 
             //ViewBag.DonationType = new SelectList(db.DonationTypeIDs, "DonationTypeID1", "DonationDesc", donation.DonationType);
             ViewBag.DonorID = new SelectList(db.Donors, "DonorID", "FastName", donation.DonorID);
             return View(donation);
         }
-        
+
         //
         // GET: /Donation/Edit/5
- 
+
         public ActionResult Edit(int id)
         {
             Donation donation = db.Donations.Find(id);
@@ -112,7 +108,7 @@ namespace BearCamp.Controllers
 
         //
         // GET: /Donation/Delete/5
- 
+
         public ActionResult Delete(int id)
         {
             Donation donation = db.Donations.Find(id);
@@ -124,7 +120,7 @@ namespace BearCamp.Controllers
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
-        {            
+        {
             Donation donation = db.Donations.Find(id);
             db.Donations.Remove(donation);
             db.SaveChanges();

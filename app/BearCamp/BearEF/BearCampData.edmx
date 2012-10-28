@@ -126,46 +126,13 @@
     <edmx:ConceptualModels>
       <Schema Namespace="bearcampModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="bearcampEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Donors" EntityType="bearcampModel.Donor" />
           <EntitySet Name="Users" EntityType="bearcampModel.User" />
-          <EntitySet Name="Donations" EntityType="bearcampModel.Donation" />
-          <AssociationSet Name="FK_Donations_Donor" Association="bearcampModel.FK_Donations_Donor">
-            <End Role="Donor" EntitySet="Donors" />
-            <End Role="Donation" EntitySet="Donations" />
-          </AssociationSet>
           <EntitySet Name="CampaignEvents" EntityType="bearcampModel.CampaignEvent" />
           <EntitySet Name="Employees" EntityType="bearcampModel.Employee" />
           <EntitySet Name="Campaigns" EntityType="bearcampModel.Campaign" />
+          <EntitySet Name="Donations" EntityType="bearcampModel.Donation" />
+          <EntitySet Name="Donors" EntityType="bearcampModel.Donor" />
           </EntityContainer>
-        <EntityType Name="Donor">
-          <Key>
-            <PropertyRef Name="DonorID" />
-          </Key>
-          <Property Name="DonorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FastName" Type="String" MaxLength="52" Unicode="true" FixedLength="false" />
-          <Property Name="LastName" Type="String" MaxLength="54" Unicode="true" FixedLength="false" />
-          <Property Name="Email" Type="String" MaxLength="52" Unicode="true" FixedLength="false" />
-          <Property Name="Phone" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
-          <Property Name="Address1" Type="String" MaxLength="54" Unicode="true" FixedLength="false" />
-          <Property Name="Address2" Type="String" MaxLength="54" Unicode="true" FixedLength="false" />
-          <Property Name="City" Type="String" MaxLength="52" Unicode="true" FixedLength="false" />
-          <Property Name="State" Type="String" MaxLength="2" Unicode="false" FixedLength="true" />
-          <Property Name="Zip" Type="String" MaxLength="7" Unicode="false" FixedLength="true" />
-          <NavigationProperty Name="Donations" Relationship="bearcampModel.FK_Donations_Donor" FromRole="Donor" ToRole="Donation" />
-          <Property Type="String" Name="Company" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="FirstName" MaxLength="52" FixedLength="false" Unicode="true" />
-          <Property Type="Int32" Name="Primary_Contact" />
-          <Property Type="String" Name="Job_Title" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Business_Phone" MaxLength="255" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="HomePhone" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Type="String" Name="Mobile_Phone" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Type="String" Name="Fax_Number" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Type="String" Name="Country_Region" MaxLength="52" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Web_Page" MaxLength="144" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Notes" MaxLength="253" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Attachments" MaxLength="144" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Constituencies" MaxLength="255" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="UserLogin" />
@@ -177,41 +144,6 @@
           <Property Name="Email" Type="String" MaxLength="57" Unicode="true" FixedLength="false" />
           <Property Name="Phone" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
         </EntityType>
-        <EntityType Name="Donation">
-          <Key>
-            <PropertyRef Name="DonationsID" />
-          </Key>
-          <Property Type="Int32" Name="DonationsID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int32" Name="DonorID" Nullable="false" />
-          <Property Type="Decimal" Name="DonationAmount" Nullable="false" Precision="19" Scale="4" />
-          <Property Type="DateTime" Name="DonataionDate" Nullable="false" />
-          <Property Type="String" Name="Comments" MaxLength="343" FixedLength="false" Unicode="true" />
-          <Property Type="Int32" Name="DonationType" Nullable="false" />
-          <NavigationProperty Name="Donor" Relationship="bearcampModel.FK_Donations_Donor" FromRole="Donation" ToRole="Donor" />
-          <Property Type="String" Name="Description" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="Campaign" />
-          <Property Type="Int32" Name="Event" />
-          <Property Type="Int32" Name="Owner" />
-          <Property Type="Boolean" Name="Paid" />
-          <Property Type="DateTime" Name="DonationDate" Nullable="false" />
-          <Property Type="DateTime" Name="PaymentDate" />
-          <Property Type="Boolean" Name="ThanksSent" />
-          <Property Type="DateTime" Name="ThanksDate" />
-          <Property Type="Decimal" Name="ThanksAmount" Precision="19" Scale="4" />
-          <Property Type="String" Name="PaymentMethod" MaxLength="255" FixedLength="false" Unicode="true" />
-        </EntityType>
-        <Association Name="FK_Donations_Donor">
-          <End Type="bearcampModel.Donor" Role="Donor" Multiplicity="1" />
-          <End Type="bearcampModel.Donation" Role="Donation" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Donor">
-              <PropertyRef Name="DonorID" />
-            </Principal>
-            <Dependent Role="Donation">
-              <PropertyRef Name="DonorID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityType Name="CampaignEvent">
           <Key>
             <PropertyRef Name="CampaignEventId" />
@@ -262,35 +194,59 @@
           <Property Type="Decimal" Name="Fundraising_Goal" Precision="19" Scale="4" />
           <Property Type="String" Name="Status" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="Donation">
+          <Key>
+            <PropertyRef Name="DonationsID" />
+          </Key>
+          <Property Type="Int32" Name="DonationsID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="DonorID" />
+          <Property Type="String" Name="Description" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Campaign" />
+          <Property Type="Int32" Name="Event" />
+          <Property Type="Int32" Name="Owner" />
+          <Property Type="Decimal" Name="DonationAmount" Nullable="false" Precision="19" Scale="4" />
+          <Property Type="Boolean" Name="Paid" />
+          <Property Type="DateTime" Name="DonationDate" Nullable="false" />
+          <Property Type="DateTime" Name="PaymentDate" />
+          <Property Type="String" Name="Comments" MaxLength="343" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DonationType" Nullable="false" />
+          <Property Type="Boolean" Name="ThanksSent" />
+          <Property Type="DateTime" Name="ThanksDate" />
+          <Property Type="Decimal" Name="ThanksAmount" Precision="19" Scale="4" />
+          <Property Type="String" Name="PaymentMethod" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Donor">
+          <Key>
+            <PropertyRef Name="DonorID" />
+          </Key>
+          <Property Type="Int32" Name="DonorID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Company" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FirstName" MaxLength="52" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LastName" MaxLength="54" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="52" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Primary_Contact" />
+          <Property Type="String" Name="Job_Title" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Business_Phone" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="HomePhone" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Mobile_Phone" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Fax_Number" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Address1" MaxLength="54" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address2" MaxLength="54" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="City" MaxLength="52" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="State" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="Zip" MaxLength="7" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="Country_Region" MaxLength="52" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Web_Page" MaxLength="144" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Notes" MaxLength="253" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Attachments" MaxLength="144" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Constituencies" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="bearcampModelStoreContainer" CdmEntityContainer="bearcampEntities">
-          <EntitySetMapping Name="Donors"><EntityTypeMapping TypeName="bearcampModel.Donor"><MappingFragment StoreEntitySet="Donor">
-            <ScalarProperty Name="Constituencies" ColumnName="Constituencies" />
-                <ScalarProperty Name="Attachments" ColumnName="Attachments" />
-                <ScalarProperty Name="Notes" ColumnName="Notes" />
-                <ScalarProperty Name="Web_Page" ColumnName="Web Page" />
-                <ScalarProperty Name="Country_Region" ColumnName="Country/Region" />
-                <ScalarProperty Name="Fax_Number" ColumnName="Fax Number" />
-                <ScalarProperty Name="Mobile_Phone" ColumnName="Mobile Phone" />
-                <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
-                <ScalarProperty Name="Business_Phone" ColumnName="Business Phone" />
-                <ScalarProperty Name="Job_Title" ColumnName="Job Title" />
-                <ScalarProperty Name="Primary_Contact" ColumnName="Primary Contact" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="Company" ColumnName="Company" />
-                <ScalarProperty Name="DonorID" ColumnName="DonorID" />
-            <ScalarProperty Name="LastName" ColumnName="LastName" />
-            <ScalarProperty Name="Email" ColumnName="Email" />
-            <ScalarProperty Name="Address1" ColumnName="Address1" />
-            <ScalarProperty Name="Address2" ColumnName="Address2" />
-            <ScalarProperty Name="City" ColumnName="City" />
-            <ScalarProperty Name="State" ColumnName="State" />
-            <ScalarProperty Name="Zip" ColumnName="Zip" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="Users"><EntityTypeMapping TypeName="bearcampModel.User"><MappingFragment StoreEntitySet="Users">
             <ScalarProperty Name="UserLogin" ColumnName="UserLogin" />
             <ScalarProperty Name="Pswd" ColumnName="Pswd" />
@@ -299,28 +255,6 @@
             <ScalarProperty Name="Email" ColumnName="Email" />
             <ScalarProperty Name="Phone" ColumnName="Phone" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Donations">
-            <EntityTypeMapping TypeName="bearcampModel.Donation">
-              <MappingFragment StoreEntitySet="Donations">
-                <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
-                <ScalarProperty Name="ThanksAmount" ColumnName="ThanksAmount" />
-                <ScalarProperty Name="ThanksDate" ColumnName="ThanksDate" />
-                <ScalarProperty Name="ThanksSent" ColumnName="ThanksSent" />
-                <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
-                <ScalarProperty Name="DonationDate" ColumnName="DonationDate" />
-                <ScalarProperty Name="Paid" ColumnName="Paid" />
-                <ScalarProperty Name="Owner" ColumnName="Owner" />
-                <ScalarProperty Name="Event" ColumnName="Event" />
-                <ScalarProperty Name="Campaign" ColumnName="Campaign" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="DonationType" ColumnName="DonationType" />
-                <ScalarProperty Name="Comments" ColumnName="Comments" />
-                <ScalarProperty Name="DonationAmount" ColumnName="DonationAmount" />
-                <ScalarProperty Name="DonorID" ColumnName="DonorID" />
-                <ScalarProperty Name="DonationsID" ColumnName="DonationsID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="CampaignEvents">
             <EntityTypeMapping TypeName="bearcampModel.CampaignEvent">
               <MappingFragment StoreEntitySet="CampaignEvents">
@@ -374,6 +308,55 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Donations">
+            <EntityTypeMapping TypeName="bearcampModel.Donation">
+              <MappingFragment StoreEntitySet="Donations">
+                <ScalarProperty Name="PaymentMethod" ColumnName="PaymentMethod" />
+                <ScalarProperty Name="ThanksAmount" ColumnName="ThanksAmount" />
+                <ScalarProperty Name="ThanksDate" ColumnName="ThanksDate" />
+                <ScalarProperty Name="ThanksSent" ColumnName="ThanksSent" />
+                <ScalarProperty Name="DonationType" ColumnName="DonationType" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="PaymentDate" ColumnName="PaymentDate" />
+                <ScalarProperty Name="DonationDate" ColumnName="DonationDate" />
+                <ScalarProperty Name="Paid" ColumnName="Paid" />
+                <ScalarProperty Name="DonationAmount" ColumnName="DonationAmount" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="Event" ColumnName="Event" />
+                <ScalarProperty Name="Campaign" ColumnName="Campaign" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DonorID" ColumnName="DonorID" />
+                <ScalarProperty Name="DonationsID" ColumnName="DonationsID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Donors">
+            <EntityTypeMapping TypeName="bearcampModel.Donor">
+              <MappingFragment StoreEntitySet="Donor">
+                <ScalarProperty Name="Constituencies" ColumnName="Constituencies" />
+                <ScalarProperty Name="Attachments" ColumnName="Attachments" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Web_Page" ColumnName="Web Page" />
+                <ScalarProperty Name="Country_Region" ColumnName="Country/Region" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Fax_Number" ColumnName="Fax Number" />
+                <ScalarProperty Name="Mobile_Phone" ColumnName="Mobile Phone" />
+                <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+                <ScalarProperty Name="Business_Phone" ColumnName="Business Phone" />
+                <ScalarProperty Name="Job_Title" ColumnName="Job Title" />
+                <ScalarProperty Name="Primary_Contact" ColumnName="Primary Contact" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="DonorID" ColumnName="DonorID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -396,16 +379,12 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="BearCampData" ZoomLevel="95">
-        <EntityTypeShape EntityType="bearcampModel.Donor" Width="1.5" PointX="2.75" PointY="4.75" Height="2.9417936197916674" IsExpanded="true" />
-        <EntityTypeShape EntityType="bearcampModel.User" Width="1.5" PointX="0.75" PointY="4.875" Height="2.3648893229166656" IsExpanded="true" />
-        <EntityTypeShape EntityType="bearcampModel.Donation" Width="1.5" PointX="5" PointY="5" Height="2.5571907552083317" />
-        <AssociationConnector Association="bearcampModel.FK_Donations_Donor" >
-          <ConnectorPoint PointX="4.25" PointY="7.3362532552083328" />
-          <ConnectorPoint PointX="5" PointY="7.3362532552083328" />
-        </AssociationConnector>
-        <EntityTypeShape EntityType="bearcampModel.CampaignEvent" Width="1.5" PointX="7.375" PointY="8.75" Height="2.7494921875000031" />
-        <EntityTypeShape EntityType="bearcampModel.Employee" Width="1.5" PointX="9.375" PointY="8.75" Height="4.4802050781250031" />
-        <EntityTypeShape EntityType="bearcampModel.Campaign" Width="1.5" PointX="5.375" PointY="0.75" Height="2.5571907552083317" />
+        <EntityTypeShape EntityType="bearcampModel.User" Width="1.5" PointX="0.75" PointY="0.75" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="bearcampModel.CampaignEvent" Width="1.5" PointX="2.75" PointY="0.75" Height="2.7494921875000031" />
+        <EntityTypeShape EntityType="bearcampModel.Employee" Width="1.5" PointX="4.75" PointY="0.75" Height="4.4802050781250031" />
+        <EntityTypeShape EntityType="bearcampModel.Campaign" Width="1.5" PointX="0.75" PointY="4.75" Height="2.5771907552083331" />
+        <EntityTypeShape EntityType="bearcampModel.Donation" Width="1.5" PointX="6.75" PointY="0.75" Height="4.0956022135416674" />
+        <EntityTypeShape EntityType="bearcampModel.Donor" Width="1.5" PointX="8.75" PointY="0.875" Height="5.057109375" />
         </Diagram>
     </Diagrams>
   </Designer>

@@ -14,36 +14,27 @@ namespace BearEF
 {
     public partial class Donor
     {
-        public Donor()
-        {
-            this.Donations = new HashSet<Donation>();
-        }
-    
         public int DonorID { get; set; }
-        public string FastName { get; set; }
-        public string LastName { get; set; }
-        public string Email { get; set; }
-        public string Phone { get; set; }
-        public string Address1 { get; set; }
-        public string Address2 { get; set; }
-        public string City { get; set; }
-        public string State { get; set; }
-        public string Zip { get; set; }
         public string Company { get; set; }
         public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
         public Nullable<int> Primary_Contact { get; set; }
         public string Job_Title { get; set; }
         public string Business_Phone { get; set; }
         public string HomePhone { get; set; }
         public string Mobile_Phone { get; set; }
         public string Fax_Number { get; set; }
+        public string Address1 { get; set; }
+        public string Address2 { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string Zip { get; set; }
         public string Country_Region { get; set; }
         public string Web_Page { get; set; }
         public string Notes { get; set; }
         public string Attachments { get; set; }
         public string Constituencies { get; set; }
-    
-        public virtual ICollection<Donation> Donations { get; set; }
     }
     
 }

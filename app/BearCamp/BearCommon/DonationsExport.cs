@@ -20,9 +20,8 @@ namespace BearCommon
                                    DonorID = n.DonorID,
                                    DonationAmount = n.DonationAmount,
                                    DonationsDate = n.DonataionDate,
-                                   Comments = n.Comments,
-                                   DonationType = n.DonationTypeID
-                                };
+                                   Comments = n.Comments
+                                  };
             
 
             var csv = donations.ToCsv();

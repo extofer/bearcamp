@@ -29,6 +29,19 @@ namespace BearEF
         public string City { get; set; }
         public string State { get; set; }
         public string Zip { get; set; }
+        public string Company { get; set; }
+        public string FirstName { get; set; }
+        public Nullable<int> Primary_Contact { get; set; }
+        public string Job_Title { get; set; }
+        public string Business_Phone { get; set; }
+        public string HomePhone { get; set; }
+        public string Mobile_Phone { get; set; }
+        public string Fax_Number { get; set; }
+        public string Country_Region { get; set; }
+        public string Web_Page { get; set; }
+        public string Notes { get; set; }
+        public string Attachments { get; set; }
+        public string Constituencies { get; set; }
     
         public virtual ICollection<Donation> Donations { get; set; }
     }

@@ -1,0 +1,55 @@
+﻿@model BearEF.CampaignEvent
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>CampaignEvent</legend>
+
+    <div class="display-label">Name</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">Description</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Description)
+    </div>
+
+    <div class="display-label">Related_Campaign</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Related_Campaign)
+    </div>
+
+    <div class="display-label">Owner</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Owner)
+    </div>
+
+    <div class="display-label">Start_Date</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Start_Date)
+    </div>
+
+    <div class="display-label">End_Date</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.End_Date)
+    </div>
+
+    <div class="display-label">Status</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Status)
+    </div>
+
+    <div class="display-label">Fundraising_Goal</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Fundraising_Goal)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.CampaignEventId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

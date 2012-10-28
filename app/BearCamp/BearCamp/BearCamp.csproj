@@ -64,15 +64,11 @@
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CampaignEventsController.cs" />
     <Compile Include="Controllers\CampaignsController.cs" />
     <Compile Include="Controllers\DonationController.cs" />
-    <Compile Include="Controllers\DonationTypeController.cs" />
     <Compile Include="Controllers\DonorsController.cs" />
-    <Compile Include="Controllers\EventsController.cs" />
-    <Compile Include="Controllers\FeatureController.cs" />
-    <Compile Include="Controllers\FundraiserTasksController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PermissionController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -174,36 +170,6 @@
     <Content Include="Views\User\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Feature\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Feature\Details.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Feature\Create.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Feature\Edit.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Feature\Delete.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Permission\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Permission\Details.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Permission\Create.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Permission\Edit.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Permission\Delete.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -225,36 +191,6 @@
     <Content Include="Views\Donation\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\DonationType\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\DonationType\Details.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\DonationType\Create.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\DonationType\Edit.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\DonationType\Delete.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Events\Index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Events\Details.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Events\Create.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Events\Edit.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Events\Delete.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Campaigns\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -270,19 +206,19 @@
     <Content Include="Views\Campaigns\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\FundraiserTasks\Index.cshtml" />
+    <Content Include="Views\CampaignEvents\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\FundraiserTasks\Details.cshtml" />
+    <Content Include="Views\CampaignEvents\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\FundraiserTasks\Create.cshtml" />
+    <Content Include="Views\CampaignEvents\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\FundraiserTasks\Edit.cshtml" />
+    <Content Include="Views\CampaignEvents\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\FundraiserTasks\Delete.cshtml" />
+    <Content Include="Views\CampaignEvents\Delete.cshtml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

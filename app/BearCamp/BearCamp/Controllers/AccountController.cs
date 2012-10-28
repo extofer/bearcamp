@@ -44,6 +44,7 @@ namespace BearCamp.Controllers
 
         private bool AuthenticateUser(string userName, string password)
         {
+            
             var users = Db.Users.Where(p => p.UserLogin == userName).Where(p => p.Pswd == password);
             return users.Any();
         }

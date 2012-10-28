@@ -19,8 +19,11 @@ namespace BearCamp.Controllers
 
         public ViewResult Index()
         {
-            var donations = db.Donations.Include(d => d.DonationTypeID).Include(d => d.Donor);
-            return View(donations.ToList());
+            if (db.Donations != null)
+            {
+                return View(db.Donations.ToList());
+
+            }
         }
 
         //

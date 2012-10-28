@@ -14,21 +14,14 @@ namespace BearEF
 {
     public partial class Campaign
     {
-        public Campaign()
-        {
-            this.FundraisingTasks = new HashSet<FundraisingTask>();
-        }
-    
-        public int ID { get; set; }
+        public int CampaignId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public Nullable<int> Owner { get; set; }
-        public Nullable<System.DateTime> LaunchDate { get; set; }
-        public Nullable<System.DateTime> FundraiserDeadline { get; set; }
-        public Nullable<decimal> FundraisingGoal { get; set; }
+        public Nullable<System.DateTime> Launch_Date { get; set; }
+        public Nullable<System.DateTime> Fundraiser_Deadline { get; set; }
+        public Nullable<decimal> Fundraising_Goal { get; set; }
         public string Status { get; set; }
-    
-        public virtual ICollection<FundraisingTask> FundraisingTasks { get; set; }
     }
     
 }

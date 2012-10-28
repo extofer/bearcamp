@@ -80,25 +80,16 @@
     <Compile Include="Campaign.cs">
       <DependentUpon>BearDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Donation.cs">
+    <Compile Include="CampaignEvent.cs">
       <DependentUpon>BearDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DonationTypeID.cs">
+    <Compile Include="Donation.cs">
       <DependentUpon>BearDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Donor.cs">
       <DependentUpon>BearDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Events.cs">
-      <DependentUpon>BearDataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Feature.cs">
-      <DependentUpon>BearDataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FundraisingTask.cs">
-      <DependentUpon>BearDataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Permission.cs">
+    <Compile Include="Employee.cs">
       <DependentUpon>BearDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

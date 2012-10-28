@@ -4,37 +4,28 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<script type="text/javascript">
-    $(document).ready(function () {
-
-        $('#usertable tr:even').css("background-color", "#A5BFDD");
-    });
-</script>
 <h2>Users</h2>
+<table class="table">
 
-
-<table style="width:100%;" class="table">
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            <strong>Login Name:</strong> @Html.DisplayFor(modelItem => item.UserLogin)<br/>
-            <strong>Password:</strong> @Html.DisplayFor(modelItem => item.Pswd)<br/>
-            <strong>First Name:</strong> @Html.DisplayFor(modelItem => item.FirstName)<br/>
-            <strong>Last Name:</strong> @Html.DisplayFor(modelItem => item.LastName)<br/>
-            <strong>E-Mail:</strong> @Html.DisplayFor(modelItem => item.Email)<br/>
-            <strong>Phone:</strong> @Html.DisplayFor(modelItem => item.Phone)
-        </td>
-    </tr>
-    <tr>
-        <td>
-            @Html.ActionLink("Create New", "Create", null, new{@class="btn btn-info"})
-            @Html.ActionLink("Edit", "Edit", new { id = item.UserLogin }, new { @class = "btn" })
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }, new { @class = "btn" })
-            
-        </td>
-    </tr>
-}
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                <strong>Login Name:</strong> @Html.DisplayFor(modelItem => item.UserLogin)<br/>
+                <strong>Password:</strong> @Html.DisplayFor(modelItem => item.Pswd)<br/>
+                <strong>First Name:</strong> @Html.DisplayFor(modelItem => item.FirstName)<br/>
+                <strong>Last Name:</strong> @Html.DisplayFor(modelItem => item.LastName)<br/>
+                <strong>E-Mail:</strong> @Html.DisplayFor(modelItem => item.Email)<br/>
+                <strong>Phone:</strong> @Html.DisplayFor(modelItem => item.Phone)<br/>
+                <a href="@Url.Action("Edit", "User", new { id = item.UserLogin })" title="Edit Login">
+                    <img src="../../Content/images/application_edit.png" /></a> | <a href="@Url.Action("Delete", "User", new { id = item.UserLogin })" title="Delete User">
+                                                                                      <img src="../../Content/images/delete.png" /></a>
+            </td>
+        </tr>
+    }
 
 </table>
+<p> @Html.ActionLink("Create", "Create", null, new{ @class = "btn btn-info"})</p>
+
+        
+
 

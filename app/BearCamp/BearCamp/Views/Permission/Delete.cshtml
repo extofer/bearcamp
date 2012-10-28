@@ -4,16 +4,12 @@
     ViewBag.Title = "Delete";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Delete</h2>
-
 <h3>Are you sure you want to delete this?</h3>
-<fieldset>
-    <legend>Permission</legend>
+@using (Html.BeginForm()) {<fieldset>
 
     <div class="display-label">User</div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.User.Pswd)
+        @Html.DisplayTextFor(model => model.UserLogin)
     </div>
 
     <div class="display-label">Feature</div>
@@ -26,9 +22,8 @@
         @Html.DisplayFor(model => model.PermissionSort)
     </div>
 </fieldset>
-@using (Html.BeginForm()) {
+<br/>
     <p>
-        <input type="submit" value="Delete" /> |
-        @Html.ActionLink("Back to List", "Index")
+        <input type="submit" value="Delete" class="btn btn-info"/> @Html.ActionLink("Back to List", "Index", null, new {@class="btn"})
     </p>
 }
